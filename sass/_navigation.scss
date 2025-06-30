@@ -1,0 +1,31 @@
+#main-menu {
+    ul {
+        li {
+            a {
+                text-transform: uppercase;
+                font-family: Roboto, sans-serif;
+                font-size: 1rem;
+                font-weight: bold;
+            }
+        }
+    }
+} 
+.header-social {
+    padding-left: 0;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    li {
+        list-style: none;
+        margin-left: 10px;
+        &:first-child {
+            margin-left: 0;
+        }
+        a {
+
+        }
+        img {
+            height: 20px;
+        }
+    }
+}

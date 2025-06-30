@@ -1,0 +1,100 @@
+
+.latest-news {
+    &__title {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid black;
+      font-family: Roboto, sans-serif;
+    }
+    .vc_column-inner {
+        &:last-child {
+            .latest-news__title {
+                border-bottom: none;
+            }
+        }
+    }
+}
+.home-page-mission {
+    box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.4);
+    .hpm-link {
+        position: relative;
+        display: inline-block;
+        &:before {
+            content: '';
+            position: absolute;
+            background-repeat: no-repeat;
+            background-size: contain;
+            bottom: -3px;
+            left: 0px;
+        }
+        a {
+            border-bottom: none;
+            color: #c41f41;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    .who-we-are {
+        padding-left: 55px;
+        &:before {
+            width: 47px;
+            height: 35px;
+            background-image: url('assets/images/homepage-icons/who-we-are.svg');
+        }
+
+    }
+    .member-benefits {
+        padding-left: 40px;
+        &:before {
+            width: 40px;
+            height: 35px;
+            background-image: url('assets/images/homepage-icons/member-benefits.svg');
+        }
+
+    }
+    .join-renew {
+        padding-left: 55px;
+        &:before {
+            width: 37px;
+            height: 30px;
+            background-image: url('assets/images/homepage-icons/join-renew.svg');
+        }
+    }
+}
+
+.homepage-store-row {
+    .woocommerce {
+        ul.products {
+            li.product {
+                width: 100%;
+                margin: 0 0 3em 0;
+                float: none;
+                .price {
+                    display: none;
+                }
+                .button {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .latest-news {
+        &.vc_row {
+            display: flex;
+            flex-direction: row;
+            > .wpb_column {
+                float: none;
+                &:first-child {
+                    order: 2;
+                }
+                &:last-child {
+                    order: 3;
+                }
+            }
+        }
+    }
+}

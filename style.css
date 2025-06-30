@@ -1,0 +1,346 @@
+/*
+Theme Name: Tennessee Farm Bureau
+Theme URI: https://tnfarmbureau.org/
+Author: Journal Communications
+Author URI: https://jnlcom.com
+Template:  visual-composer-starter
+Description: Child theme of Visual Composer Starter 
+Version: 1.0
+Requires PHP: 5.6
+Tested up to: 6.6.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, portfolio, featured-images, full-width-template, e-commerce, translation-ready, rtl-language-support, theme-options, custom-colors, custom-logo, custom-menu, footer-widgets, left-sidebar, right-sidebar, custom-background, one-column, two-columns
+Text Domain: tnfb
+*/
+.unstyle-list {
+	margin-left: 0;
+}
+
+.unstyle-list li {
+	list-style: none;
+}
+
+a.unstyle-link {
+	color: inherit !important;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a.unstyle-link:hover, a.unstyle-link:visited, a.unstyle-link:active {
+	text-decoration: underline;
+	color: inherit;
+}
+
+.object-fit-image {
+	position: relative;
+}
+
+.object-fit-image img {
+	object-fit: cover;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+body {
+	font-family: roboto, sans-serif;
+	font-weight: 400;
+}
+
+.entry-content ul > li:before {
+	content: '';
+	display: none;
+}
+
+@media screen and (min-width: 1200px) {
+	.container {
+		width: unset;
+		max-width: 1365px;
+	}
+}
+
+h2, h3, h4 {
+	font-family: open-sans, sans-serif;
+	font-weight: 500;
+}
+
+h2 {
+	font-size: 3.125rem;
+}
+
+.section-heading {
+	border-bottom: 1px solid  black;
+	text-align: center;
+	padding-bottom: 20px;
+	margin-bottom: 20px;
+}
+
+body.header-full-width #header .navbar {
+	background-color: rgba(0, 0, 0, 0.8) !important;
+}
+
+body.header-full-width #header .navbar .navbar-wrapper {
+	background-color: transparent !important;
+}
+
+.navbar-brand {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+}
+
+.navbar-brand h1, .navbar-brand h2 {
+	font-family: 'Open Sans', sans-serif;
+	font-style: italic;
+	font-size: 1.375rem;
+	margin-left: 15px;
+}
+
+.navbar-brand h1 a, .navbar-brand h2 a {
+	color: #fff;
+	font-size: inherit;
+}
+
+.homepage-hero {
+	width: 100%;
+	margin: 0;
+	background-repeat: no-repeat;
+	background-size: cover;
+	min-height: 500px;
+	background-position: center;
+}
+
+.navbar-header {
+	margin-top: 10px;
+}
+
+@media only screen and (min-width: 768px) {
+	.visualcomposerstarter:not(.menu-sandwich) .navbar-wrapper {
+		display: flex;
+	}
+	.visualcomposerstarter:not(.menu-sandwich) .vct-cart-wrapper {
+		display: none;
+	}
+	body:not(.menu-sandwich) #main-menu {
+		margin-left: 15px;
+	}
+}
+
+#main-menu ul li a {
+	text-transform: uppercase;
+	font-family: Roboto, sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+}
+
+.header-social {
+	padding-left: 0;
+	display: flex;
+	flex-direction: row;
+	margin-top: 10px;
+}
+
+.header-social li {
+	list-style: none;
+	margin-left: 10px;
+}
+
+.header-social li:first-child {
+	margin-left: 0;
+}
+
+.header-social li img {
+	height: 20px;
+}
+
+.footer-newsletter {
+	background-color: #ff0000;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.footer-newsletter > .container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.footer-newsletter__in-the-loop {
+	font-family: "santelia-rough-two", sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	font-size: 4rem;
+	color: white;
+	text-align: center;
+}
+
+.footer-newsletter__description {
+	color: #fff;
+	text-align: center;
+}
+
+.footer-newsletter__button {
+	display: inline-block;
+	color: #C41F41;
+	background-color: #fff;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 1.125rem;
+	font-family: 'Open Sans', sans-serif;
+	min-width: 330px;
+	padding: 20px;
+}
+
+.footer-menu ul li {
+	display: block;
+	text-transform: uppercase;
+	font-size: 1.125rem;
+}
+
+@media screen and (min-width: 992px) {
+	.footer-newsletter > .container {
+		display: flex;
+		flex-direction: row;
+		align-items: flex-start;
+	}
+	.footer-newsletter__in-the-loop {
+		padding-right: 30px;
+		flex-shrink: 0;
+	}
+	.footer-newsletter__description {
+		padding-right: 15px;
+		padding-left: 15px;
+		text-align: left;
+	}
+	#footer .footer-bottom {
+		display: flex;
+		flex-direction: row-reverse;
+		justify-content: space-between;
+	}
+	#footer .footer-right-block {
+		flex-grow: 1;
+		margin-left: 0;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	#footer .footer-center-block {
+		flex-grow: 1;
+		border-right: 1px solid white;
+	}
+	#footer .footer-left-block {
+		flex-grow: 1;
+		border-right: 1px solid white;
+		display: flex;
+		flex-direction: row;
+	}
+	.menu-footer-menu-container {
+		display: flex;
+		justify-content: center;
+	}
+}
+
+.latest-news__title {
+	font-size: 1.5rem;
+	margin-bottom: 30px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid black;
+	font-family: Roboto, sans-serif;
+}
+
+.latest-news .vc_column-inner:last-child .latest-news__title {
+	border-bottom: none;
+}
+
+.home-page-mission {
+	box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+}
+
+.home-page-mission .hpm-link {
+	position: relative;
+	display: inline-block;
+}
+
+.home-page-mission .hpm-link:before {
+	content: '';
+	position: absolute;
+	background-repeat: no-repeat;
+	background-size: contain;
+	bottom: -3px;
+	left: 0px;
+}
+
+.home-page-mission .hpm-link a {
+	border-bottom: none;
+	color: #c41f41;
+}
+
+.home-page-mission .hpm-link a:hover {
+	text-decoration: underline;
+}
+
+.home-page-mission .who-we-are {
+	padding-left: 55px;
+}
+
+.home-page-mission .who-we-are:before {
+	width: 47px;
+	height: 35px;
+	background-image: url("assets/images/homepage-icons/who-we-are.svg");
+}
+
+.home-page-mission .member-benefits {
+	padding-left: 40px;
+}
+
+.home-page-mission .member-benefits:before {
+	width: 40px;
+	height: 35px;
+	background-image: url("assets/images/homepage-icons/member-benefits.svg");
+}
+
+.home-page-mission .join-renew {
+	padding-left: 55px;
+}
+
+.home-page-mission .join-renew:before {
+	width: 37px;
+	height: 30px;
+	background-image: url("assets/images/homepage-icons/join-renew.svg");
+}
+
+.homepage-store-row .woocommerce ul.products li.product {
+	width: 100%;
+	margin: 0 0 3em 0;
+	float: none;
+}
+
+.homepage-store-row .woocommerce ul.products li.product .price {
+	display: none;
+}
+
+.homepage-store-row .woocommerce ul.products li.product .button {
+	display: none;
+}
+
+@media screen and (min-width: 992px) {
+	.latest-news.vc_row {
+		display: flex;
+		flex-direction: row;
+	}
+	.latest-news.vc_row > .wpb_column {
+		float: none;
+	}
+	.latest-news.vc_row > .wpb_column:first-child {
+		order: 2;
+	}
+	.latest-news.vc_row > .wpb_column:last-child {
+		order: 3;
+	}
+}
+
+/*# sourceMappingURL=style.css.map */

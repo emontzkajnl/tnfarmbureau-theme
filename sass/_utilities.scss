@@ -1,0 +1,28 @@
+.unstyle-list {
+	margin-left: 0;
+	li {
+		list-style: none;
+	}
+}
+// apply to "a" element
+a.unstyle-link {
+    color: inherit !important;
+    text-decoration: none;
+    cursor: pointer;
+    &:hover, &:visited, &:active {
+        text-decoration: underline;
+        color: inherit;
+    }
+}
+
+.object-fit-image {
+    position: relative;
+    img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        right: 0;
+    }
+}

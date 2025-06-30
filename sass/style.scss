@@ -1,0 +1,35 @@
+/*
+Theme Name: Tennessee Farm Bureau
+Theme URI: https://tnfarmbureau.org/
+Author: Journal Communications
+Author URI: https://jnlcom.com
+Template:  visual-composer-starter
+Description: Child theme of Visual Composer Starter 
+Version: 1.0
+Requires PHP: 5.6
+Tested up to: 6.6.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: blog, portfolio, featured-images, full-width-template, e-commerce, translation-ready, rtl-language-support, theme-options, custom-colors, custom-logo, custom-menu, footer-widgets, left-sidebar, right-sidebar, custom-background, one-column, two-columns
+Text Domain: tnfb
+*/
+
+@import "colors";
+@import "utilities";
+// @import "fonts";
+@import "global";
+@import "headings";
+@import "header";
+@import "navigation";
+
+@import "footer";
+@import "blocks";
+// @import "pagesandposts";
+// @import "archive";
+// @import "comments";
+
+// font-family: "open-sans", sans-serif;
+// font-weight: 400;
+// font-style: normal;
+
+// <link rel="stylesheet" href="https://use.typekit.net/dxk2lhf.css">

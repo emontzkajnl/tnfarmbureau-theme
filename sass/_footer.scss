@@ -1,0 +1,92 @@
+.footer-newsletter {
+    background-color: #ff0000;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    > .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__in-the-loop {
+        font-family: "santelia-rough-two", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        font-size: 4rem;
+        color: white;
+        text-align: center;
+        
+    }
+    &__description {
+        color: #fff;
+        text-align: center;
+    }
+    &__button {
+        display: inline-block;
+        color: $maroon;
+        background-color: #fff;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 1.125rem;
+        font-family: 'Open Sans', sans-serif;
+        min-width: 330px;
+        padding: 20px;
+    }
+}
+.footer-menu {
+    ul {
+        li {
+            display: block;
+            text-transform: uppercase;
+            font-size: 1.125rem;
+        }
+    }
+}
+@media screen and (min-width: 992px) {
+    .footer-newsletter {
+        > .container {
+            display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+        }
+        &__in-the-loop {
+            padding-right: 30px;
+            flex-shrink: 0;
+        }
+        &__description {
+            padding-right: 15px;
+            padding-left: 15px;
+            text-align: left;
+        }
+    }
+    #footer {
+        .footer-bottom {
+            display: flex;
+            flex-direction: row-reverse;
+            justify-content: space-between;
+        }
+        .footer-right-block {
+            flex-grow: 1;
+            margin-left: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer-center-block {
+            flex-grow: 1;
+            border-right: 1px solid white;
+        }
+        .footer-left-block {
+            flex-grow: 1;
+            border-right: 1px solid white;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    .menu-footer-menu-container {
+        display: flex;
+        justify-content: center;
+    }
+
+
+}
