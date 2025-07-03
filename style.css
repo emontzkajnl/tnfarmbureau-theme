@@ -48,6 +48,8 @@ a.unstyle-link:hover, a.unstyle-link:visited, a.unstyle-link:active {
 body {
 	font-family: roboto, sans-serif;
 	font-weight: 400;
+	font-size: 1.25rem;
+	line-height: 1.5;
 }
 
 .entry-content ul > li:before {

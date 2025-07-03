@@ -31,19 +31,17 @@
 						<div class="navbar-brand">
 							<?php
 							if ( has_custom_logo() ) :
-								the_custom_logo(); 
+								
                                 echo is_front_page() ? '<h1>' : '<h2>'; ?>
-                                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-                                    Tennessee <br /> Farm Bureau
+								
+								<?php the_custom_logo(); 
+								
+								?>
+								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
+								<img src="<?php echo get_stylesheet_directory_uri(  ); ?>/assets/images/voice-of-agriculture.svg" alt="Voice of Agriculture">
                                 </a>
                                 <?php echo is_front_page() ? '</h1>' : '</h2>'; 
-							else : ?>
-								<h1>
-									<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-										<?php bloginfo( 'name' ); ?>
-									</a>
-								</h1>
-							<?php endif; ?>
+							endif; ?>
 
 						</div>
 						<?php do_action( 'visualcomposerstarter_after_navbar_brand' ); ?>
@@ -111,4 +109,6 @@
 	</header>
 	<?php visualcomposerstarter_hook_after_header(); ?>
 <?php endif;
+
+
 
