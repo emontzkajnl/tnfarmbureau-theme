@@ -1,4 +1,5 @@
 #main-menu {
+    background-color: white;
     ul {
         li {
             a {
@@ -6,6 +7,16 @@
                 font-family: Roboto, sans-serif;
                 font-size: 1rem;
                 font-weight: bold;
+            }
+        }
+    }
+    > ul {
+        > li {
+            > a {
+                color: black;
+                &:hover {
+                    color: black;
+                }
             }
         }
     }
@@ -26,6 +37,27 @@
         }
         img {
             height: 20px;
+        }
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    body {
+        &:not(.menu-sandwich) {
+            #main-menu {
+                background-color: transparent;
+                ul {
+                    li {
+                        &.menu-item-has-children {
+                            >a {
+                                &:before {
+                                    content: '';
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

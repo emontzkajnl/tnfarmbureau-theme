@@ -101,14 +101,17 @@
 			</div><!--.container-->
 		</nav>
 		<?php do_action( 'visualcomposerstarter_after_header_menu' ); ?>
-		<?php if ( is_singular() && apply_filters( 'visualcomposerstarter_single_image', true ) ) : ?>
-			<div class="header-image">
-				<?php visualcomposerstarter_header_featured_content(); ?>
-			</div>
-		<?php endif; ?>
+		<?php //if ( is_singular() && apply_filters( 'visualcomposerstarter_single_image', true ) ) : ?>
+			<!-- <div class="header-image"> -->
+				<?php //visualcomposerstarter_header_featured_content(); ?>
+			<!-- </div> -->
+		<?php //endif; ?>
 	</header>
 	<?php visualcomposerstarter_hook_after_header(); ?>
 <?php endif;
-
+// $meta = get_post_meta( get_the_ID());
+// echo '<pre>';
+// print_r($meta);
+// echo '</pre>';
 
 

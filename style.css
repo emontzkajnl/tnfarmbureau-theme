@@ -131,11 +131,23 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	}
 }
 
+#main-menu {
+	background-color: white;
+}
+
 #main-menu ul li a {
 	text-transform: uppercase;
 	font-family: Roboto, sans-serif;
 	font-size: 1rem;
 	font-weight: bold;
+}
+
+#main-menu > ul > li > a {
+	color: black;
+}
+
+#main-menu > ul > li > a:hover {
+	color: black;
 }
 
 .header-social {
@@ -156,6 +168,15 @@ body.header-full-width #header .navbar .navbar-wrapper {
 
 .header-social li img {
 	height: 20px;
+}
+
+@media only screen and (min-width: 768px) {
+	body:not(.menu-sandwich) #main-menu {
+		background-color: transparent;
+	}
+	body:not(.menu-sandwich) #main-menu ul li.menu-item-has-children > a:before {
+		content: '';
+	}
 }
 
 .footer-newsletter {
@@ -327,6 +348,33 @@ body.header-full-width #header .navbar .navbar-wrapper {
 
 .homepage-store-row .woocommerce ul.products li.product .button {
 	display: none;
+}
+
+.tnfb-publication {
+	display: flex;
+	flex-direction: row;
+	background-color: white;
+	margin-bottom: 50px;
+}
+
+.tnfb-publication__text-container {
+	padding: 40px;
+}
+
+.tnfb-publication__title {
+	font-weight: 700;
+	font-family: Roboto;
+	font-size: 2rem;
+}
+
+.tnfb-publication__read-more a {
+	color: #C41F41;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.tnfb-publication__img-container {
+	padding: 40px 40px 40px 0;
 }
 
 @media screen and (min-width: 992px) {

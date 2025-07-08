@@ -81,6 +81,34 @@
         }
     }
 }
+.tnfb-publication {
+    display: flex;
+    flex-direction: row;
+    background-color: white;
+    margin-bottom: 50px;
+    &__text-container {
+
+        padding: 40px;
+    }
+    &__title {
+        font-weight: 700;
+        font-family: Roboto;
+        font-size: 2rem;
+    }
+    &__description {
+        
+    }
+    &__read-more {
+        a {
+            color: $maroon;
+            text-transform: uppercase;
+            font-weight: bold;
+        }   
+    }
+    &__img-container {
+        padding: 40px 40px 40px 0;
+    }
+}
 @media screen and (min-width: 992px) {
     .latest-news {
         &.vc_row {
@@ -97,4 +125,5 @@
             }
         }
     }
+    
 }
