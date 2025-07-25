@@ -38,7 +38,11 @@
 								
 								?>
 								<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name' ) ); ?>">
-								<img src="<?php echo get_stylesheet_directory_uri(  ); ?>/assets/images/voice-of-agriculture.svg" alt="Voice of Agriculture">
+								<?php if (is_front_page()) { ?>
+									<img src="<?php echo get_stylesheet_directory_uri(  ); ?>/assets/images/voice-of-agriculture.svg" alt="Voice of Agriculture">
+								<?php  } else { ?>
+								<img src="<?php echo get_stylesheet_directory_uri(  ); ?>/assets/images/voice-of-agriculture-black.svg" alt="Voice of Agriculture">
+								<?php } ?>
                                 </a>
                                 <?php echo is_front_page() ? '</h1>' : '</h2>'; 
 							endif; ?>
@@ -95,10 +99,27 @@
 							<?php endif; ?>
 							<?php do_action( 'visualcomposerstarter_after_header_widget_area' ); ?>
 						</div><!--#main-menu-->
-					<?php endif; ?>
-                    <?php get_template_part( 'template-parts/header-social' ); ?>
+					<?php endif;
+					// get_search_form(); ?>
+					<span class="search-form"><button class="search-submit" type="submit">Search</button></span>
+                    <?php get_template_part( 'template-parts/header-social' ); 
+					?>
 				</div><!--.navbar-wrapper-->
+				
 			</div><!--.container-->
+			<?php if ( ! is_front_page()) { ?>
+			<div class="secondary-nav-container">
+				<div class="container">
+			<?php
+				wp_nav_menu( array(
+					'theme_location' => 'tertiary',
+					'menu_class'     => 'secondary-nav',
+					'container'      => '',
+				) );
+				 ?>
+			</div>
+			</div>
+			<?php } ?>
 		</nav>
 		<?php do_action( 'visualcomposerstarter_after_header_menu' ); ?>
 		<?php //if ( is_singular() && apply_filters( 'visualcomposerstarter_single_image', true ) ) : ?>
@@ -109,6 +130,9 @@
 	</header>
 	<?php visualcomposerstarter_hook_after_header(); ?>
 <?php endif;
+
+
+
 // $meta = get_post_meta( get_the_ID());
 // echo '<pre>';
 // print_r($meta);

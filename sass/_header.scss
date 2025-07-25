@@ -1,7 +1,14 @@
 body.header-full-width {
+    &.home {
+        #header {
+            .navbar {
+                background-color: rgba(0,0,0,0.8);
+            }
+        }
+    }
     #header {
         .navbar {
-            background-color: rgba(0,0,0,0.8) !important;
+            background-color: #fff;
             .navbar-wrapper {
                 background-color: transparent !important;
             }
@@ -17,6 +24,7 @@ body.header-full-width {
         font-style: italic;
         font-size: 1.375rem;
         margin-left: 15px;
+        margin-bottom: 0;
         a {
             color: #fff;
             font-size: inherit;
@@ -39,6 +47,9 @@ body.header-full-width {
     .visualcomposerstarter:not(.menu-sandwich) {
         .navbar-wrapper {
             display: flex;
+            padding-bottom: 0;
+            padding-top: 0;
+
         }
         // #main-menu {
         //     order: 2;

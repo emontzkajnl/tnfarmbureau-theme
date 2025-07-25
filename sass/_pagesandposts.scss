@@ -1,0 +1,27 @@
+#breadcrumbs {
+    font-size: 1.25rem;
+    text-align: center;
+    color: #707070;
+    a {
+        color: inherit;
+    }
+    .breadcrumb_last {
+        color: $maroon;
+    }
+}
+.entry-title {
+    text-align: center;
+    font-family: roboto;
+    font-size: 2.625rem;
+
+}
+.date {
+    color: #111;
+    font-size: 1.25rem;
+    text-align: center;
+    font-family: roboto;
+    margin-bottom: 35px;
+    a {
+        color: inherit;
+    }
+}

@@ -1,8 +1,8 @@
 .block-layout-1 {
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
     .td_block__item {
-        width: 33.333%;
+        // width: 33.333%;
         position: relative;
         overflow-y: hidden;
     }
@@ -29,15 +29,15 @@
 .block-layout-2 {
     .td_block {
         &__item {
-            display: flex;
-            flex-direction: row;
+            // display: flex;
+            // flex-direction: row;
             margin-bottom: 30px;
             > a {
-                width: 30%;
+                // width: 30%;
             }
         }
         &__text-area {
-            width: 70%;
+            // width: 70%;
             padding: 20px;
             display: flex;
             flex-direction: column;

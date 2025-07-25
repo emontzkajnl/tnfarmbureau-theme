@@ -40,7 +40,9 @@
         }
     }
 }
-
+.secondary-nav-container {
+    display: none;
+}
 @media only screen and (min-width: 768px) {
     body {
         &:not(.menu-sandwich) {
@@ -48,6 +50,12 @@
                 background-color: transparent;
                 ul {
                     li {
+                        &:hover {
+                            background-color: #fff;
+                            a {
+                                color: $maroon;
+                            }
+                        }
                         &.menu-item-has-children {
                             >a {
                                 &:before {
@@ -57,6 +65,62 @@
                         }
                     }
                 }
+            }
+        }
+        &:not(.home) {
+            &:not(.menu-sandwich) {
+                #main-menu {
+                    ul {
+                        li {
+                            a {
+                                color: #000;
+                                &:hover {
+                                    color: #000;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .navbar-header {
+            padding-bottom: 20px;
+        }
+        .navbar {
+            padding-bottom: 0;
+        }
+    }
+    .secondary-nav-container {
+        display: block;
+        background-color: $maroon;
+        width: 100%;
+    }
+    .secondary-nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        max-width: 840px;
+        margin-left: auto;
+        margin-right: auto;
+
+        li {
+            list-style: none;
+        }
+        a {
+            color: white;
+            text-transform: uppercase;
+            font-family: Roboto, sans-serif;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+    }
+}
+@media only screen and (min-width: 1024px) {
+    body {
+        &.header-full-width {
+            .navbar {
+                padding-left: 0; // parent override
+                padding-right: 0;
             }
         }
     }

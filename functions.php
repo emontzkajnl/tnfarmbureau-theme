@@ -31,3 +31,21 @@ add_action('acf/init', function() {
   
     }
   });
+
+  add_filter( 'wpseo_breadcrumb_links', 'wpseo_breadcrumb_remove_postname' );
+function wpseo_breadcrumb_remove_postname( $links ) {
+  if ( sizeof( $links ) > 1 ) {
+    array_pop( $links );
+  }
+  return $links;
+}
+
+function register_child_theme_menus() {
+    register_nav_menus( array(
+        // 'primary'       => esc_html__( 'Primary Menu', 'visual-composer-starter' ),
+        // 'secondary'     => esc_html__( 'Footer Menu', 'visual-composer-starter' ),
+        'tertiary'		=> esc_html__( 'Secondary Menu', 'visual-composer-starter' )
+    ) );
+}
+
+add_action( 'init', 'register_child_theme_menus' );
