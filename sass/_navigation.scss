@@ -52,8 +52,14 @@
                     li {
                         &:hover {
                             background-color: #fff;
+                            color: $maroon;
                             a {
                                 color: $maroon;
+                            }
+                        }
+                        a {
+                            &:hover {
+                                color: $maroon !important;
                             }
                         }
                         &.menu-item-has-children {
@@ -72,10 +78,25 @@
                 #main-menu {
                     ul {
                         li {
+                            &.current-menu-item {
+                                > a {
+                                    color: #000;
+                                }
+                            }
                             a {
                                 color: #000;
                                 &:hover {
                                     color: #000;
+                                }
+                            }
+                            ul {
+                                li {
+                                    &:hover {
+                                        background-color: #fff;
+                                        > a {
+                                            background-color: #fff;
+                                        }
+                                    }
                                 }
                             }
                         }

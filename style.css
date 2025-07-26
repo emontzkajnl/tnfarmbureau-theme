@@ -187,18 +187,31 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	}
 	body:not(.menu-sandwich) #main-menu ul li:hover {
 		background-color: #fff;
+		color: #C41F41;
 	}
 	body:not(.menu-sandwich) #main-menu ul li:hover a {
 		color: #C41F41;
 	}
+	body:not(.menu-sandwich) #main-menu ul li a:hover {
+		color: #C41F41 !important;
+	}
 	body:not(.menu-sandwich) #main-menu ul li.menu-item-has-children > a:before {
 		content: '';
+	}
+	body:not(.home):not(.menu-sandwich) #main-menu ul li.current-menu-item > a {
+		color: #000;
 	}
 	body:not(.home):not(.menu-sandwich) #main-menu ul li a {
 		color: #000;
 	}
 	body:not(.home):not(.menu-sandwich) #main-menu ul li a:hover {
 		color: #000;
+	}
+	body:not(.home):not(.menu-sandwich) #main-menu ul li ul li:hover {
+		background-color: #fff;
+	}
+	body:not(.home):not(.menu-sandwich) #main-menu ul li ul li:hover > a {
+		background-color: #fff;
 	}
 	body .navbar-header {
 		padding-bottom: 20px;
