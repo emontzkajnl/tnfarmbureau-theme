@@ -550,4 +550,38 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	color: white;
 }
 
+.block-layout-4 .td_block__item {
+	position: relative;
+	height: 250px;
+}
+
+.block-layout-4 .td_block__link {
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+	background-repeat: no-repeat;
+	position: relative;
+}
+
+.block-layout-4 .td_block__link:after {
+	content: '';
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	background-color: rgba(0, 0, 0, 0.4);
+}
+
+.block-layout-4 .td_block__title {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	color: white;
+	top: 50%;
+	transform: translateY(-50%);
+	z-index: 2;
+}
+
 /*# sourceMappingURL=style.css.map */
