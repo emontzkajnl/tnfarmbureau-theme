@@ -44,7 +44,8 @@ function register_child_theme_menus() {
     register_nav_menus( array(
         // 'primary'       => esc_html__( 'Primary Menu', 'visual-composer-starter' ),
         // 'secondary'     => esc_html__( 'Footer Menu', 'visual-composer-starter' ),
-        'tertiary'		=> esc_html__( 'Secondary Menu', 'visual-composer-starter' )
+        'tertiary'		=> esc_html__( 'Secondary Menu', 'visual-composer-starter' ),
+        'new-primary'   => esc_html__( 'New Primary Menu', 'visual-composer-starter')
     ) );
 }
 

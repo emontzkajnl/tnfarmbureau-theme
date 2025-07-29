@@ -25,3 +25,50 @@
         color: inherit;
     }
 }
+
+.entry-content p.home-see-all-link {
+
+    font-family: Roboto, sans-serif;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: $maroon;
+    a {
+        color: inherit;
+        text-decoration: none;
+        border-bottom: none;
+        &:hover {
+            color: inherit;
+            text-decoration: underline;
+        }
+    }
+}
+a.read-more {
+    color: white;
+    background-color: $darkblue;
+    display: inline-block;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1rem;
+    &:hover, &:visited, &:focus {
+        color: white;
+        text-decoration: none;
+    }
+
+}
+.td_block_5 {
+    h4 {
+        margin-top: 10px;
+        margin-bottom: 30px;
+    }
+}
+@media screen and (min-width: 768px) {
+    .entry-content p.home-see-all-link {
+        position: absolute;
+        right: 0;
+        margin-bottom: 0;
+        margin-top: -40px;
+        text-align: center;
+    }
+}

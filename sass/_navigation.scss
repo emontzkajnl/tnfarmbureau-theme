@@ -33,10 +33,40 @@
             margin-left: 0;
         }
         a {
+            display: inline-block;
+            background-color: #3b4335;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
 
         }
         img {
             height: 20px;
+            position: relative;
+        }
+        &.facebook {
+            img {
+                left: 8px;
+                top: 1px;
+            }
+        }
+        &.instagram {
+            img {
+                left: 7px;
+                top: 1px;
+            }
+        }
+        &.youtube {
+            img {
+                left: 4px;
+                top: 1px;
+            }
+        }
+        &.twitter {
+            img {
+                left: 5px;
+                top: 1px;
+            }
         }
     }
 }
@@ -55,6 +85,7 @@
                             color: $maroon;
                             a {
                                 color: $maroon;
+                                // background-color: #fff !important;
                             }
                         }
                         a {
@@ -133,6 +164,9 @@
             font-family: Roboto, sans-serif;
             font-size: 1rem;
             font-weight: bold;
+            &:hover {
+                color: white !important;
+            }
         }
     }
 }
