@@ -47,9 +47,16 @@ body.header-full-width {
     .visualcomposerstarter:not(.menu-sandwich) {
         .navbar-wrapper {
             display: flex;
+            justify-content: center;
+            align-items: center;
             padding-bottom: 0;
             padding-top: 0;
 
+        }
+        .search-form {
+            position: relative;
+            width: 40px;
+            height: 40px;
         }
         // #main-menu {
         //     order: 2;
