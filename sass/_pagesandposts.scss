@@ -63,6 +63,16 @@ a.read-more {
         margin-bottom: 30px;
     }
 }
+.county-office-input-container {
+    display: flex;
+	justify-content: center;
+    input {
+        margin-left: 30px;
+    }
+    p {
+        margin-bottom: 0;
+    }
+}
 @media screen and (min-width: 768px) {
     .entry-content p.home-see-all-link {
         position: absolute;

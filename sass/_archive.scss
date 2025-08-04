@@ -1,0 +1,23 @@
+.archive {
+    .section-heading {
+
+    }
+    .fade-in-img {
+        position: relative;
+        width: 100%;
+        padding-bottom: 60%;
+        img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            left: 0;
+            bottom: 0;
+        }
+    }
+    .entry-title {
+        font-size: 1.75rem;
+        font-family: Roboto, sans-serif;
+        font-weight: bold;
+    }
+}

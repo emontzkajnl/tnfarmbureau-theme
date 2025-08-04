@@ -362,6 +362,19 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	margin-bottom: 30px;
 }
 
+.county-office-input-container {
+	display: flex;
+	justify-content: center;
+}
+
+.county-office-input-container input {
+	margin-left: 30px;
+}
+
+.county-office-input-container p {
+	margin-bottom: 0;
+}
+
 @media screen and (min-width: 768px) {
 	.entry-content p.home-see-all-link {
 		position: absolute;
@@ -370,6 +383,27 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 		margin-top: -40px;
 		text-align: center;
 	}
+}
+
+.archive .fade-in-img {
+	position: relative;
+	width: 100%;
+	padding-bottom: 60%;
+}
+
+.archive .fade-in-img img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	left: 0;
+	bottom: 0;
+}
+
+.archive .entry-title {
+	font-size: 1.75rem;
+	font-family: Roboto, sans-serif;
+	font-weight: bold;
 }
 
 .footer-newsletter {
