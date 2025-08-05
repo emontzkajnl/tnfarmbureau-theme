@@ -52,6 +52,21 @@ body {
 	line-height: 1.5;
 }
 
+.object-fit-image {
+	position: relative;
+	width: 100%;
+	padding-bottom: 66%;
+}
+
+.object-fit-image img {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	left: 0;
+	bottom: 0;
+}
+
 .entry-content ul > li:before {
 	content: '';
 	display: none;
@@ -144,6 +159,9 @@ body.header-full-width #header .navbar .navbar-wrapper {
 		position: relative;
 		width: 40px;
 		height: 40px;
+	}
+	.visualcomposerstarter:not(.menu-sandwich):not(.home) .search-form::after {
+		color: black;
 	}
 	.visualcomposerstarter:not(.menu-sandwich) .vct-cart-wrapper {
 		display: none;
@@ -392,21 +410,6 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	}
 }
 
-.archive .fade-in-img {
-	position: relative;
-	width: 100%;
-	padding-bottom: 60%;
-}
-
-.archive .fade-in-img img {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	object-fit: cover;
-	left: 0;
-	bottom: 0;
-}
-
 .archive .entry-title {
 	font-size: 1.75rem;
 	font-family: Roboto, sans-serif;
@@ -570,20 +573,6 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	background-image: url("assets/images/homepage-icons/join-renew.svg");
 }
 
-.homepage-store-row .woocommerce ul.products li.product {
-	width: 100%;
-	margin: 0 0 3em 0;
-	float: none;
-}
-
-.homepage-store-row .woocommerce ul.products li.product .price {
-	display: none;
-}
-
-.homepage-store-row .woocommerce ul.products li.product .button {
-	display: none;
-}
-
 .tnfb-publication {
 	display: flex;
 	flex-direction: row;
@@ -630,6 +619,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 .block-layout-1 {
 	margin-left: -3px !important;
 	margin-right: -3px !important;
+	margin-bottom: 30px;
 }
 
 .block-layout-1 .td_block__item {
@@ -666,6 +656,10 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	color: white;
 }
 
+.block-layout-2 {
+	margin-bottom: 30px;
+}
+
 .block-layout-2 .td_block__item {
 	margin-bottom: 30px;
 }
@@ -676,6 +670,11 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	flex-direction: column;
 	justify-content: center;
 	align-items: start;
+}
+
+.block-layout-2 .td_block__text-area p {
+	font-size: 1rem;
+	line-height: 1.2rem;
 }
 
 .td_block_text_with_title .block-title {
@@ -693,7 +692,11 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	color: white;
 }
 
-.block-layout-3 .td_block__item a {
+.block-layout-3 {
+	margin-bottom: 30px;
+}
+
+.block-layout-3 .td_block a {
 	color: black;
 }
 
@@ -703,6 +706,10 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 
 .block-layout-3 .td_block__item.small h4 {
 	font-size: 1rem;
+}
+
+.block-layout-4 {
+	margin-bottom: 30px;
 }
 
 .block-layout-4 .td_block__item {

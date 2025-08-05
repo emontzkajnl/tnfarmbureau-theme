@@ -44,6 +44,7 @@ body.header-full-width {
 }
 
 @media only screen and (min-width: 768px) {
+
     .visualcomposerstarter:not(.menu-sandwich) {
         .navbar-wrapper {
             display: flex;
@@ -57,6 +58,16 @@ body.header-full-width {
             position: relative;
             width: 40px;
             height: 40px;
+            &:after {
+                // color: inherit !important;
+            }
+        }
+        &:not(.home) {
+            .search-form {
+                &::after {
+                    color: black;
+                }
+            }
         }
         // #main-menu {
         //     order: 2;

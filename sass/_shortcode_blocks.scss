@@ -3,6 +3,7 @@
     // flex-direction: row;
     margin-left: -3px !important;
     margin-right: -3px !important;
+    margin-bottom: 30px;
     .td_block__item {
         // width: 33.333%;
         padding-left: 3px !important;
@@ -51,8 +52,13 @@
             flex-direction: column;
             justify-content: center;
             align-items: start;
+            p {
+                font-size: 1rem;
+                line-height: 1.2rem;
+            }
         }
     }
+    margin-bottom: 30px;
 }
 .td_block_text_with_title {
     .block-title {
@@ -70,10 +76,11 @@
 }
 .block-layout-3 {
     .td_block {
+        a {
+            color: black;
+        }
         &__item {
-            a {
-                color: black;
-            }
+
             &.small {
                 margin-bottom: 15px;
                 h4 {
@@ -82,6 +89,7 @@
             }
         }
     }
+    margin-bottom: 30px;
 }
 .block-layout-4 {
     .td_block {
@@ -116,4 +124,5 @@
             z-index: 2;
         }
     }
+    margin-bottom: 30px;
 }

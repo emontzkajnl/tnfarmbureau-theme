@@ -10,8 +10,11 @@
 ?>
 <div class=" col-md-3 col-lg-4">
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry-preview' ); ?>>
-
-	<?php visualcomposerstarter_post_thumbnail(); ?>
+	<div class="object-fit-image">
+	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?> ">
+	<?php //visualcomposerstarter_post_thumbnail(); 
+	the_post_thumbnail();?>
+	</a></div>
 
 	<?php //visualcomposerstarter_entry_meta(); ?>
 
