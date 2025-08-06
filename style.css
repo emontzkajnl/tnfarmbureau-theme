@@ -460,7 +460,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 }
 
 .footer-newsletter {
-	background-color: #ff0000;
+	background-color: #c41f41;
 	padding-top: 50px;
 	padding-bottom: 50px;
 }
@@ -484,6 +484,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 .footer-newsletter__description {
 	color: #fff;
 	text-align: center;
+	font-size: 1rem;
 }
 
 .footer-newsletter__button {
@@ -498,9 +499,17 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	padding: 20px;
 }
 
+.footer-bottom {
+	padding: 60px 0 30px;
+}
+
 .footer-menu ul li {
 	display: block;
 	text-transform: uppercase;
+	font-size: 1.125rem;
+}
+
+.footer-left-block {
 	font-size: 1.125rem;
 }
 
@@ -508,16 +517,17 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	.footer-newsletter > .container {
 		display: flex;
 		flex-direction: row;
-		align-items: flex-start;
 	}
 	.footer-newsletter__in-the-loop {
 		padding-right: 30px;
 		flex-shrink: 0;
+		margin-bottom: 0;
 	}
 	.footer-newsletter__description {
 		padding-right: 15px;
 		padding-left: 15px;
 		text-align: left;
+		margin-bottom: 0;
 	}
 	#footer .footer-bottom {
 		display: flex;

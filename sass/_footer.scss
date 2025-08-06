@@ -1,5 +1,5 @@
 .footer-newsletter {
-    background-color: #ff0000;
+    background-color: #c41f41;
     padding-top: 50px;
     padding-bottom: 50px;
     > .container {
@@ -16,10 +16,12 @@
         color: white;
         text-align: center;
         
+        
     }
     &__description {
         color: #fff;
         text-align: center;
+        font-size: 1rem;
     }
     &__button {
         display: inline-block;
@@ -33,6 +35,9 @@
         padding: 20px;
     }
 }
+.footer-bottom {
+    padding: 60px 0 30px;
+}
 .footer-menu {
     ul {
         li {
@@ -42,21 +47,26 @@
         }
     }
 }
+.footer-left-block {
+    font-size: 1.125rem;
+}
 @media screen and (min-width: 992px) {
     .footer-newsletter {
         > .container {
             display: flex;
             flex-direction: row;
-            align-items: flex-start;
+            // align-items: flex-start;
         }
         &__in-the-loop {
             padding-right: 30px;
             flex-shrink: 0;
+            margin-bottom: 0;
         }
         &__description {
             padding-right: 15px;
             padding-left: 15px;
             text-align: left;
+            margin-bottom: 0;
         }
     }
     #footer {
