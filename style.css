@@ -72,6 +72,10 @@ body {
 	display: none;
 }
 
+.entry-content p a {
+	border-bottom: none;
+}
+
 @media screen and (min-width: 1200px) {
 	.container {
 		width: unset;
@@ -147,6 +151,35 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	margin-top: 10px;
 }
 
+.search-form-dropdown {
+	position: relative;
+}
+
+.search-form-dropdown .search-toggle {
+	width: 35px;
+	height: 35px;
+	background-color: transparent;
+}
+
+.search-form-dropdown .search-form {
+	position: absolute;
+	min-width: 270px;
+	display: none;
+	top: 60px;
+}
+
+.search-form-dropdown.open .search-form {
+	display: block;
+}
+
+.search-form {
+	position: relative;
+}
+
+.search-field {
+	color: black;
+}
+
 @media only screen and (min-width: 768px) {
 	.visualcomposerstarter:not(.menu-sandwich) .navbar-wrapper {
 		display: flex;
@@ -154,14 +187,6 @@ body.header-full-width #header .navbar .navbar-wrapper {
 		align-items: center;
 		padding-bottom: 0;
 		padding-top: 0;
-	}
-	.visualcomposerstarter:not(.menu-sandwich) .search-form {
-		position: relative;
-		width: 40px;
-		height: 40px;
-	}
-	.visualcomposerstarter:not(.menu-sandwich):not(.home) .search-form::after {
-		color: black;
 	}
 	.visualcomposerstarter:not(.menu-sandwich) .vct-cart-wrapper {
 		display: none;
@@ -190,9 +215,13 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	color: black;
 }
 
+#main-menu .button-close {
+	color: black;
+}
+
 .header-social {
 	padding-left: 0;
-	display: flex;
+	display: none;
 	flex-direction: row;
 	margin-top: 10px;
 }
@@ -243,6 +272,14 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	display: none;
 }
 
+.navbar-toggle .icon-bar {
+	background-color: white;
+}
+
+.voa-logo {
+	display: none;
+}
+
 @media only screen and (min-width: 768px) {
 	body:not(.menu-sandwich) #main-menu {
 		background-color: transparent;
@@ -281,6 +318,9 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	body .navbar {
 		padding-bottom: 0;
 	}
+	.header-social {
+		display: flex;
+	}
 	.secondary-nav-container {
 		display: block;
 		background-color: #C41F41;
@@ -313,6 +353,9 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	body.header-full-width .navbar {
 		padding-left: 0;
 		padding-right: 0;
+	}
+	.voa-logo {
+		display: inline-block;
 	}
 }
 

@@ -20,12 +20,16 @@
             }
         }
     }
+    .button-close {
+        color: black;
+    }
 } 
 .header-social {
     padding-left: 0;
-    display: flex;
+    display: none;
     flex-direction: row;
     margin-top: 10px;
+    
     li {
         list-style: none;
         margin-left: 10px;
@@ -71,6 +75,14 @@
     }
 }
 .secondary-nav-container {
+    display: none;
+}
+.navbar-toggle {
+    .icon-bar {
+        background-color: white;
+    }
+}
+.voa-logo {
     display: none;
 }
 @media only screen and (min-width: 768px) {
@@ -142,6 +154,9 @@
             padding-bottom: 0;
         }
     }
+    .header-social {
+        display: flex;
+    }
     .secondary-nav-container {
         display: block;
         background-color: $maroon;
@@ -178,5 +193,8 @@
                 padding-right: 0;
             }
         }
+    }
+    .voa-logo {
+        display: inline-block;
     }
 }

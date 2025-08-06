@@ -3,6 +3,12 @@
 
 // visualcomposerstarter-general
 
+function tnfb_scripts() {
+  wp_enqueue_script( 'tnfb-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery') , null, true);
+}
+
+add_action( 'wp_enqueue_scripts', 'tnfb_scripts' );
+
 function social_icons_shortcode() {
     ob_start();
     get_template_part( 'template-parts/header-social' );
