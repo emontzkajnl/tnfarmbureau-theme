@@ -101,7 +101,7 @@ h2 {
 }
 
 .section-heading {
-	border-bottom: 1px solid  black;
+	border-bottom: 1px solid  #111;
 	text-align: center;
 	padding-bottom: 20px;
 	margin-bottom: 20px;
@@ -425,6 +425,14 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	text-decoration: none;
 }
 
+.sbvcytc-videos-wrapper .slick-dots {
+	display: none m !important;
+}
+
+.home .main-content {
+	padding-bottom: 0;
+}
+
 .td_block_5 h4 {
 	margin-top: 10px;
 	margin-bottom: 30px;
@@ -557,12 +565,40 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	}
 }
 
+.latest-news-buttons ul {
+	padding-left: 0;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.latest-news-buttons ul li {
+	list-style: none;
+}
+
+.latest-news-buttons ul li a {
+	color: #C41F41;
+	border-bottom: none;
+	font-weight: bold;
+}
+
 .latest-news__title {
 	font-size: 1.5rem;
 	margin-bottom: 30px;
 	padding-bottom: 30px;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #898989;
 	font-family: Roboto, sans-serif;
+}
+
+.latest-news__date {
+	font-size: 1rem;
+	color: #a2a2a2;
+	text-align: center;
+	margin-bottom: .5em !important;
+}
+
+.latest-news__featured img {
+	margin-bottom: 30px;
 }
 
 .latest-news .vc_column-inner:last-child .latest-news__title {
@@ -627,20 +663,22 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 }
 
 .tnfb-publication {
-	display: flex;
-	flex-direction: row;
 	background-color: white;
 	margin-bottom: 50px;
 }
 
 .tnfb-publication__text-container {
-	padding: 40px;
+	padding: 40px 0 40px 40px;
 }
 
 .tnfb-publication__title {
 	font-weight: 700;
 	font-family: Roboto;
 	font-size: 2rem;
+}
+
+.tnfb-publication__description {
+	font-size: 1rem;
 }
 
 .tnfb-publication__read-more a {
@@ -650,7 +688,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 }
 
 .tnfb-publication__img-container {
-	padding: 40px 40px 40px 0;
+	padding: 40px;
 }
 
 @media screen and (min-width: 992px) {
@@ -797,6 +835,18 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	top: 50%;
 	transform: translateY(-50%);
 	z-index: 2;
+}
+
+.home .woocommerce .woocommerce-loop-product__title {
+	text-align: center;
+}
+
+.home .woocommerce ul.products li.product .price {
+	display: none !important;
+}
+
+.home .woocommerce ul.products li.product .add_to_cart_button {
+	display: none;
 }
 
 /*# sourceMappingURL=style.css.map */

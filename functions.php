@@ -56,3 +56,21 @@ function register_child_theme_menus() {
 }
 
 add_action( 'init', 'register_child_theme_menus' );
+
+add_filter('woocommerce_get_price_html', 'hide_price_for_featured_products_loop', 9999, 2);
+function hide_price_for_featured_products_loop($price, $product) {
+    // Check if we're in a product loop and the product is featured
+    if (is_product() || is_shop() || is_product_category() || is_product_tag() || (function_exists('wc_get_loop_prop') && wc_get_loop_prop('is_shortcode') && $product->is_featured())) {
+        return ''; // Hide price for featured products in shortcode
+    }
+    return $price;
+}
+
+add_filter('woocommerce_loop_add_to_cart_link', 'hide_add_to_cart_for_featured_products_loop', 9999, 3);
+function hide_add_to_cart_for_featured_products_loop($html, $product, $args) {
+    // Check if we're in a product loop and the product is featured
+    if (is_product() || is_shop() || is_product_category() || is_product_tag() || (function_exists('wc_get_loop_prop') && wc_get_loop_prop('is_shortcode') && $product->is_featured())) {
+        return ''; // Hide Add to Cart/Select Options for featured products in shortcode
+    }
+    return $html;
+}

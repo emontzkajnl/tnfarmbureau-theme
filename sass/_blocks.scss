@@ -1,11 +1,38 @@
 
+.latest-news-buttons {
+    ul {
+        padding-left: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        li {
+            list-style: none;
+            a {
+                color: $maroon;
+                border-bottom: none;
+                font-weight: bold;
+            }
+        }
+    }
+}
 .latest-news {
     &__title {
         font-size: 1.5rem;
         margin-bottom: 30px;
         padding-bottom: 30px;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #898989;
       font-family: Roboto, sans-serif;
+    }
+    &__date {
+        font-size: 1rem;
+        color: $gray;
+        text-align: center;
+        margin-bottom: .5em !important;
+    }
+    &__featured {
+        img {
+            margin-bottom: 30px;
+        }
     }
     .vc_column-inner {
         &:last-child {
@@ -82,13 +109,13 @@
 //     }
 // }
 .tnfb-publication {
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
     background-color: white;
     margin-bottom: 50px;
     &__text-container {
 
-        padding: 40px;
+        padding: 40px 0 40px 40px;
     }
     &__title {
         font-weight: 700;
@@ -96,7 +123,7 @@
         font-size: 2rem;
     }
     &__description {
-        
+        font-size: 1rem;
     }
     &__read-more {
         a {
@@ -106,7 +133,7 @@
         }   
     }
     &__img-container {
-        padding: 40px 40px 40px 0;
+        padding: 40px
     }
 }
 @media screen and (min-width: 992px) {
