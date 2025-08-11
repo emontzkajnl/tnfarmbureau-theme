@@ -25,6 +25,7 @@
     &__title {
         text-align: left;
         font-size: 1.5rem;
+        font-weight: bold;
         margin-bottom: 30px;
         padding-bottom: 30px;
         border-bottom: 1px solid #898989;
@@ -39,6 +40,10 @@
     &__featured {
         img {
             margin-bottom: 30px;
+        }
+        .latest-news__title {
+            font-size: 2.25rem;
+            font-weight: normal;
         }
     }
     .vc_column-inner {

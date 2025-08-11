@@ -593,6 +593,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 .latest-news__title {
 	text-align: left;
 	font-size: 1.5rem;
+	font-weight: bold;
 	margin-bottom: 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid #898989;
@@ -608,6 +609,11 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 
 .latest-news__featured img {
 	margin-bottom: 30px;
+}
+
+.latest-news__featured .latest-news__title {
+	font-size: 2.25rem;
+	font-weight: normal;
 }
 
 .latest-news .vc_column-inner:last-child .latest-news__title {
