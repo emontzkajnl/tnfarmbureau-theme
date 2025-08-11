@@ -303,6 +303,10 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	body:not(.menu-sandwich) #main-menu ul li.menu-item-has-children > a:before {
 		content: '';
 	}
+	body:not(.menu-sandwich) #main-menu > ul > li > ul {
+		margin-top: 0;
+		box-shadow: none;
+	}
 	body:not(.home):not(.menu-sandwich) #main-menu ul li.current-menu-item > a {
 		color: #000;
 	}
@@ -337,8 +341,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 		flex-direction: row;
 		justify-content: space-around;
 		max-width: 840px;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 10px auto;
 	}
 	.secondary-nav li {
 		list-style: none;

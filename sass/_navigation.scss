@@ -114,6 +114,14 @@
                         }
                     }
                 }
+                >ul {
+                    >li {
+                        >ul {
+                            margin-top: 0;
+                            box-shadow: none;
+                        }
+                    }
+                }
             }
         }
         &:not(.home) {
@@ -167,8 +175,7 @@
         flex-direction: row;
         justify-content: space-around;
         max-width: 840px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: 10px auto;
 
         li {
             list-style: none;
