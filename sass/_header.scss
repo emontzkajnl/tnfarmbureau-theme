@@ -44,9 +44,12 @@ body.header-full-width {
 }
 .search-form-dropdown {
     position: relative;
+    top: -7px;
+    margin-left: 5px;
+  margin-right: 5px;
     .search-toggle {
-        width: 35px;
-        height: 35px;
+        width: 30px;
+        height: 30px;
         background-color: transparent;
     }
     .search-form {
@@ -89,7 +92,9 @@ body.header-full-width {
             align-items: center;
             padding-bottom: 0;
             padding-top: 0;
-
+        }
+        .navbar-header {
+            flex: 0 0 auto;
         }
 
         // #main-menu {

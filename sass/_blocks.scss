@@ -110,11 +110,22 @@
     display: flex;
     justify-content: center;
     flex-direction: column;
+    &__link {
+        &:hover {
+            text-decoration: none;
+            .program-link__title {
+                color: #ddd;
+                border-bottom: none;
+            }
+        }
+    }
     &__title {
         color: white;
         text-align: center;
         font-weight: bold;
-
+        // &:hover {
+        //     color: #ddd;
+        // }
     }
     &:before {
         content: '';
