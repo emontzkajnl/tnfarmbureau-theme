@@ -143,7 +143,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	margin: 0;
 	background-repeat: no-repeat;
 	background-size: cover;
-	min-height: 500px;
+	min-height: 70vh;
 	background-position: center;
 }
 
@@ -426,7 +426,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 }
 
 .sbvcytc-videos-wrapper .slick-dots {
-	display: none m !important;
+	display: none !important;
 }
 
 .home .main-content {
@@ -577,12 +577,21 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 }
 
 .latest-news-buttons ul li a {
-	color: #C41F41;
+	color: #111;
 	border-bottom: none;
 	font-weight: bold;
 }
 
+.latest-news-buttons ul li a.active-news-button {
+	color: #C41F41;
+}
+
+.latest-news-buttons ul li a:hover {
+	color: #C41F41;
+}
+
 .latest-news__title {
+	text-align: left;
 	font-size: 1.5rem;
 	margin-bottom: 30px;
 	padding-bottom: 30px;
@@ -593,7 +602,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 .latest-news__date {
 	font-size: 1rem;
 	color: #a2a2a2;
-	text-align: center;
+	text-align: left;
 	margin-bottom: .5em !important;
 }
 
@@ -660,6 +669,33 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	width: 37px;
 	height: 30px;
 	background-image: url("assets/images/homepage-icons/join-renew.svg");
+}
+
+.program-link {
+	min-height: 300px;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.program-link__title {
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+
+.program-link:before {
+	content: '';
+	position: absolute;
+	left: 10px;
+	right: 10px;
+	top: 10px;
+	bottom: 10px;
+	border: 1px solid white;
+	z-index: 2;
 }
 
 .tnfb-publication {
