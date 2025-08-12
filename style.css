@@ -109,6 +109,7 @@ h2 {
 
 body.header-full-width.home #header .navbar {
 	background-color: rgba(0, 0, 0, 0.8);
+	min-height: 90px;
 }
 
 body.header-full-width #header .navbar {
@@ -147,13 +148,9 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	background-position: center;
 }
 
-.navbar-header {
-	margin-top: 10px;
-}
-
 .search-form-dropdown {
 	position: relative;
-	top: -7px;
+	top: -2px;
 	margin-left: 5px;
 	margin-right: 5px;
 }
@@ -289,6 +286,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 @media only screen and (min-width: 768px) {
 	body:not(.menu-sandwich) #main-menu {
 		background-color: transparent;
+		display: flex;
 	}
 	body:not(.menu-sandwich) #main-menu ul li:hover {
 		background-color: #fff;
@@ -299,6 +297,9 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	}
 	body:not(.menu-sandwich) #main-menu ul li a:hover {
 		color: #C41F41 !important;
+	}
+	body:not(.menu-sandwich) #main-menu ul li.menu-item-has-children > a {
+		padding-right: 0.83em;
 	}
 	body:not(.menu-sandwich) #main-menu ul li.menu-item-has-children > a:before {
 		content: '';
@@ -322,11 +323,8 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	body:not(.home):not(.menu-sandwich) #main-menu ul li ul li:hover > a {
 		background-color: #fff;
 	}
-	body .navbar-header {
-		padding-bottom: 20px;
-	}
 	body .navbar {
-		padding-bottom: 0;
+		padding: 0;
 	}
 	.header-social {
 		display: flex;
@@ -643,8 +641,8 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	position: absolute;
 	background-repeat: no-repeat;
 	background-size: contain;
-	bottom: -3px;
-	left: 0px;
+	bottom: 0;
+	left: -3px;
 }
 
 .home-page-mission .hpm-link a {
@@ -664,6 +662,8 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	width: 47px;
 	height: 35px;
 	background-image: url("assets/images/homepage-icons/who-we-are.svg");
+	bottom: -1px;
+	left: -3px;
 }
 
 .home-page-mission .member-benefits {
@@ -674,6 +674,8 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	width: 40px;
 	height: 35px;
 	background-image: url("assets/images/homepage-icons/member-benefits.svg");
+	bottom: 1px;
+	left: -7px;
 }
 
 .home-page-mission .join-renew {
@@ -684,6 +686,8 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	width: 37px;
 	height: 30px;
 	background-image: url("assets/images/homepage-icons/join-renew.svg");
+	bottom: -3px;
+	left: 5px;
 }
 
 .program-link {

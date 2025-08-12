@@ -3,6 +3,7 @@ body.header-full-width {
         #header {
             .navbar {
                 background-color: rgba(0,0,0,0.8);
+                min-height: 90px;
             }
         }
     }
@@ -39,12 +40,12 @@ body.header-full-width {
     min-height: 70vh;
     background-position: center;
 }
-.navbar-header {
-    margin-top: 10px;
-}
+// .navbar-header {
+//     margin-top: 10px;
+// }
 .search-form-dropdown {
     position: relative;
-    top: -7px;
+    top: -2px;
     margin-left: 5px;
   margin-right: 5px;
     .search-toggle {

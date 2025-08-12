@@ -141,9 +141,11 @@
 
 
 
+
 // $meta = get_post_meta( get_the_ID());
 // echo '<pre>';
 // print_r($meta);
 // echo '</pre>';
-
-
+// echo '<pre>';
+// print_r( wp_get_nav_menu_items('New Main Nav'));
+// echo '</pre>';

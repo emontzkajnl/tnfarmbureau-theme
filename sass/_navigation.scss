@@ -90,6 +90,7 @@
         &:not(.menu-sandwich) {
             #main-menu {
                 background-color: transparent;
+                display: flex;
                 ul {
                     li {
                         &:hover {
@@ -107,6 +108,7 @@
                         }
                         &.menu-item-has-children {
                             >a {
+                                padding-right: 0.83em;
                                 &:before {
                                     content: '';
                                 }
@@ -156,10 +158,10 @@
             }
         }
         .navbar-header {
-            padding-bottom: 20px;
+            // padding-bottom: 20px;
         }
         .navbar {
-            padding-bottom: 0;
+            padding: 0;
         }
     }
     .header-social {

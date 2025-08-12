@@ -64,8 +64,8 @@
             position: absolute;
             background-repeat: no-repeat;
             background-size: contain;
-            bottom: -3px;
-            left: 0px;
+            bottom: 0;
+            left: -3px;
         }
         a {
             border-bottom: none;
@@ -81,6 +81,8 @@
             width: 47px;
             height: 35px;
             background-image: url('assets/images/homepage-icons/who-we-are.svg');
+            bottom: -1px;
+            left: -3px;
         }
 
     }
@@ -90,6 +92,8 @@
             width: 40px;
             height: 35px;
             background-image: url('assets/images/homepage-icons/member-benefits.svg');
+            bottom: 1px;
+            left: -7px;
         }
 
     }
@@ -99,6 +103,8 @@
             width: 37px;
             height: 30px;
             background-image: url('assets/images/homepage-icons/join-renew.svg');
+            bottom: -3px;
+            left: 5px;
         }
     }
 }
