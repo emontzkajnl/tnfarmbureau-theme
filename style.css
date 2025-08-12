@@ -287,6 +287,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	body:not(.menu-sandwich) #main-menu {
 		background-color: transparent;
 		display: flex;
+		margin: 0 40px;
 	}
 	body:not(.menu-sandwich) #main-menu ul li:hover {
 		background-color: #fff;
@@ -687,7 +688,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	width: 37px;
 	height: 30px;
 	background-image: url("assets/images/homepage-icons/join-renew.svg");
-	bottom: -3px;
+	bottom: 0px;
 	left: 5px;
 }
 
