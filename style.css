@@ -294,6 +294,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	}
 	body:not(.menu-sandwich) #main-menu ul li:hover a {
 		color: #C41F41;
+		background-color: #eee !important;
 	}
 	body:not(.menu-sandwich) #main-menu ul li a:hover {
 		color: #C41F41 !important;
