@@ -74,3 +74,31 @@ function hide_add_to_cart_for_featured_products_loop($html, $product, $args) {
     }
     return $html;
 }
+
+function get_submenu() {
+  $main_nav_menu = wp_get_nav_menu_items('New Main Nav');
+  $postID = get_the_ID();
+  $menuParent = null;
+  $subItems = [];
+  foreach ($main_nav_menu as $key => $value) {
+    if ($value->object_id == $postID) {
+      // echo 'this is '.$value->post_title.'<br />';
+      if ($value->menu_item_parent > 0) {
+        // echo 'has parent';
+        $menuParent = $value->menu_item_parent;
+      } else {
+        // echo 'is parent';
+        $menuParent = $value->ID;
+      }
+      break; 
+    }
+  }
+  if ($menuParent == null) {return;} 
+  // echo 'menu parent is '.$menuParent;
+  foreach ($main_nav_menu as $key => $value) {
+    if ($value->menu_item_parent == $menuParent) {
+      $subItems[] = $value;
+    }
+  }
+  return $subItems;
+}

@@ -244,6 +244,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	width: 30px;
 	height: 30px;
 	border-radius: 50%;
+	border-bottom: none;
 }
 
 .header-social li img {

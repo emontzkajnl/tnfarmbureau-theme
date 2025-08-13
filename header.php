@@ -115,19 +115,23 @@
 				</div><!--.navbar-wrapper-->
 				
 			</div><!--.container-->
-			<?php if ( ! is_front_page()) { ?>
+			<?php $submenu = get_submenu();
+			if ($submenu) { 
+				// echo "<pre>";
+				// print_r($submenu);
+				// echo "</pre>";
+				?>
 			<div class="secondary-nav-container">
 				<div class="container">
-			<?php
-				wp_nav_menu( array(
-					'theme_location' => 'tertiary',
-					'menu_class'     => 'secondary-nav',
-					'container'      => '',
-				) );
-				 ?>
+				<ul id="menu-secondary-menu" class="secondary-nav">
+					<?php foreach ($submenu as $key => $value) {
+						echo '<li><a href="'.$value->url.'">'.$value->title.'</a></li>';
+					} ?>
+				</ul>
+				</div>
 			</div>
-			</div>
-			<?php } ?>
+			<?php } // if submenu
+			?>
 		</nav>
 		<?php do_action( 'visualcomposerstarter_after_header_menu' ); ?>
 		<?php //if ( is_singular() && apply_filters( 'visualcomposerstarter_single_image', true ) ) : ?>
@@ -141,6 +145,12 @@
 
 
 
+// foreach ($subItems as $key => $value) {
+// 	echo '<br />Subitem Name: '.$value->title;
+// }
+// echo '<pre>';
+// print_r($subItems);
+// echo '</pre>';
 
 // $meta = get_post_meta( get_the_ID());
 // echo '<pre>';
@@ -149,3 +159,8 @@
 // echo '<pre>';
 // print_r( wp_get_nav_menu_items('New Main Nav'));
 // echo '</pre>';
+
+//object_id, menu_item_parent, id, 
+// get post id, see if it matches an object_id
+// If match, the item with matching object_id needs to either  have a menu_item_parent more than zero, 
+// or the other menu items have to have menu_item_parent equal to that item's id 
