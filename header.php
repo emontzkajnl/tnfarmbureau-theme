@@ -142,25 +142,3 @@
 	</header>
 	<?php visualcomposerstarter_hook_after_header(); ?>
 <?php endif;
-
-
-
-// foreach ($subItems as $key => $value) {
-// 	echo '<br />Subitem Name: '.$value->title;
-// }
-// echo '<pre>';
-// print_r($subItems);
-// echo '</pre>';
-
-// $meta = get_post_meta( get_the_ID());
-// echo '<pre>';
-// print_r($meta);
-// echo '</pre>';
-// echo '<pre>';
-// print_r( wp_get_nav_menu_items('New Main Nav'));
-// echo '</pre>';
-
-//object_id, menu_item_parent, id, 
-// get post id, see if it matches an object_id
-// If match, the item with matching object_id needs to either  have a menu_item_parent more than zero, 
-// or the other menu items have to have menu_item_parent equal to that item's id 
