@@ -461,6 +461,10 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	margin-bottom: 0;
 }
 
+.who-we-are-section .header-social li.facebook img, .who-we-are-section .header-social li.instagram img, .who-we-are-section .header-social li.youtube img, .who-we-are-section .header-social li.twitter img {
+	top: 0;
+}
+
 @media screen and (min-width: 768px) {
 	.entry-content p.home-see-all-link {
 		position: absolute;
