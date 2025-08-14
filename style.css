@@ -96,6 +96,10 @@ h2 a, h3 a, h4 a {
 	color: inherit;
 }
 
+.entry-content h2, .entry-content h3, .entry-content h4 {
+	font-weight: 500;
+}
+
 .entry-content h2 a, .entry-content h3 a, .entry-content h4 a {
 	color: inherit;
 }
@@ -466,6 +470,8 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 .county-office-input-container {
 	display: flex;
 	justify-content: center;
+	flex-direction: column;
+	text-align: center;
 }
 
 .county-office-input-container input {
@@ -487,6 +493,9 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 		margin-bottom: 0;
 		margin-top: -40px;
 		text-align: center;
+	}
+	.county-office-input-container {
+		flex-direction: row;
 	}
 }
 
