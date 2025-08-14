@@ -624,7 +624,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 .latest-news__title {
 	text-align: left;
 	font-size: 1.5rem;
-	font-weight: bold;
+	font-weight: 500 !important;
 	margin-bottom: 30px;
 	padding-bottom: 30px;
 	border-bottom: 1px solid #898989;
