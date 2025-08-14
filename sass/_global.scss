@@ -4,6 +4,9 @@ body {
     font-size: 1.25rem;
     line-height: 1.5;
     // padding-top: 100px;
+    &:not(.home) {
+        padding-top: 125px;
+    }
 }
 .object-fit-image {
     position: relative;

@@ -12,6 +12,7 @@ body.header-full-width {
             background-color: #fff;
             min-height: 90px;
             .navbar-wrapper {
+                flex-grow: 1;
                 background-color: transparent !important;
             }
         }
@@ -46,9 +47,11 @@ body.header-full-width {
 // }
 .search-form-dropdown {
     position: relative;
-    top: -2px;
+    // top: -2px;
+    top: 7px;
     margin-left: 5px;
   margin-right: 5px;
+  height: 30px;
     .search-toggle {
         width: 30px;
         height: 30px;
@@ -112,4 +115,7 @@ body.header-full-width {
             margin-left: 15px;
         }
     } 
+    .search-form-dropdown {
+        top: -2px;
+    }
 }

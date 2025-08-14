@@ -52,6 +52,10 @@ body {
 	line-height: 1.5;
 }
 
+body:not(.home) {
+	padding-top: 125px;
+}
+
 .object-fit-image {
 	position: relative;
 	width: 100%;
@@ -118,6 +122,7 @@ body.header-full-width #header .navbar {
 }
 
 body.header-full-width #header .navbar .navbar-wrapper {
+	flex-grow: 1;
 	background-color: transparent !important;
 }
 
@@ -151,9 +156,10 @@ body.header-full-width #header .navbar .navbar-wrapper {
 
 .search-form-dropdown {
 	position: relative;
-	top: -2px;
+	top: 7px;
 	margin-left: 5px;
 	margin-right: 5px;
+	height: 30px;
 }
 
 .search-form-dropdown .search-toggle {
@@ -197,6 +203,9 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	}
 	body:not(.menu-sandwich) #main-menu {
 		margin-left: 15px;
+	}
+	.search-form-dropdown {
+		top: -2px;
 	}
 }
 
@@ -279,6 +288,10 @@ body.header-full-width #header .navbar .navbar-wrapper {
 
 .navbar-toggle .icon-bar {
 	background-color: white;
+}
+
+.navbar-wrapper {
+	padding: 0;
 }
 
 .voa-logo {
