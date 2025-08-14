@@ -27,8 +27,6 @@
 
 	</div><!--.entry-content-->
 
-	<?php //if ( ! is_singular() ) :?>
-		<!-- <a href="<?php// echo esc_url( get_permalink( get_the_ID() ) ) ?>" class="blue-button read-more"><?php //echo esc_html__( 'Read Full Article', 'visual-composer-starter' ) ?></a> -->
-	<?php// endif;?>
+	
 </article><!--.entry-preview-->
 </div><!-- col-md-4 -->
