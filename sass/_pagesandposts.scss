@@ -60,6 +60,12 @@ a.read-more {
 .sbvcytc-videos-wrapper .slick-dots {
     display: none !important;
 }
+.page-template {
+    .entry-title {
+        border-bottom: 1px solid black;
+        padding-bottom: 30px;
+    }
+}
 .home {
     .main-content {
         padding-bottom: 0;
@@ -104,6 +110,9 @@ a.read-more {
         margin-top: -40px;
         text-align: center;
     }
+   
+}
+@media screen and (min-width: 992px) {
     .county-office-input-container {
         flex-direction: row;
     }
