@@ -35,7 +35,7 @@ body {
             border-bottom: none;
         }
     }
-    a {
+    a:not(.program-link__link) {
         &:hover {
             text-decoration: underline !important;
         }

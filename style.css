@@ -80,7 +80,7 @@ body:not(.home) {
 	border-bottom: none;
 }
 
-.entry-content a:hover {
+.entry-content a:not(.program-link__link):hover {
 	text-decoration: underline !important;
 }
 
@@ -855,6 +855,68 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	padding: 40px;
 }
 
+.video-section-container .main-player {
+	position: relative;
+	height: 0;
+	padding-top: 56%;
+}
+
+.video-section-container .main-player iframe {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.video-section-container .main-player .video-overlay {
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+	color: white;
+	background: rgba(0, 0, 0, 0.7);
+	padding: 5px 10px;
+	border-radius: 3px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	z-index: 10;
+}
+
+.video-section-container .main-player .video-overlay .copy-link {
+	margin-left: 10px;
+	cursor: pointer;
+}
+
+.video-section-container .video-item {
+	background-color: white;
+	padding: 10px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	border-radius: 5px;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	border: none;
+	/* Remove any borders */
+	margin-bottom: 15px;
+}
+
+.video-section-container .video-item img {
+	width: 120px;
+	height: 68px;
+	margin-right: 10px;
+	border: none;
+	/* Explicitly remove borders */
+}
+
+.video-section-container .video-item:hover {
+	background-color: #eee;
+}
+
+.video-section-container .video-title {
+	font-size: 14px;
+}
+
 @media screen and (min-width: 992px) {
 	.latest-news.vc_row {
 		display: flex;
@@ -875,6 +937,19 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	}
 	.latest-news-buttons ul li {
 		padding-left: 35px;
+	}
+	.video-section-container {
+		display: flex;
+		flex-direction: row;
+	}
+	.video-section-container .main-player {
+		flex: 2;
+		height: 0;
+		padding-top: 36%;
+		margin-right: 20px;
+	}
+	.video-section-container .side-videos {
+		flex: 1;
 	}
 }
 
