@@ -23,6 +23,29 @@
     .button-close {
         color: black;
     }
+    .dropdown-toggle {
+        color: black;
+        &:after {
+            display: none;
+        }
+    }
+    &.open {
+        ul {
+            &.sub-menu {
+                li {
+                    text-indent: 10px;
+                    a {
+                        color: black;
+                        &:hover {
+                            text-decoration: underline;
+                            color: black;
+                        }
+                    }
+                 }
+            }
+          
+        }
+    }
 } 
 .header-social {
     padding-left: 0;
@@ -121,9 +144,20 @@
                             }
                         }
                     }
+                    &.sub-menu {
+                        li {
+                            a {
+                                color: #000;
+                                &:hover {
+                                    color: $maroon;
+                                }
+                            }
+                        }
+                    }
                 }
                 >ul {
                     >li {
+                        
                         >ul {
                             margin-top: 0;
                             box-shadow: none;

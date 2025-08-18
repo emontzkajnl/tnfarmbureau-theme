@@ -17,6 +17,8 @@ function social_icons_shortcode() {
 
 add_shortcode( 'social_icons', 'social_icons_shortcode');
 
+// add_shortcode( 'button', 'button_shortcode' );
+
 add_action('acf/init', function() {
     if( function_exists('acf_add_options_page') ) {
   

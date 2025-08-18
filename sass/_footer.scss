@@ -44,11 +44,25 @@
             display: block;
             text-transform: uppercase;
             font-size: 1.125rem;
+            text-align: center;
         }
     }
 }
 .footer-left-block {
     font-size: 1.125rem;
+}
+#footer {
+    .footer-socials {
+        ul {
+            text-align: center;
+        }
+    }
+    .footer-left-block {
+        text-align: center;
+    }
+}
+.footer-logo {
+    text-align: center;
 }
 @media screen and (min-width: 992px) {
     .footer-newsletter {
@@ -91,12 +105,26 @@
             border-right: 1px solid white;
             display: flex;
             flex-direction: row;
+            text-align: left;
+        }
+        .footer-socials {
+            ul {
+                text-align: left;
+            }
         }
     }
     .menu-footer-menu-container {
         display: flex;
         justify-content: center;
     }
-
-
+    .footer-menu {
+        ul {
+            li {
+                text-align: left;
+            }
+        }
+    }
+    .footer-logo {
+        text-align: left;
+    }
 }
