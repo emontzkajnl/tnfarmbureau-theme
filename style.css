@@ -80,6 +80,10 @@ body:not(.home) {
 	border-bottom: none;
 }
 
+.entry-content a:hover {
+	text-decoration: underline;
+}
+
 @media screen and (min-width: 1200px) {
 	.container {
 		width: unset;
