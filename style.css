@@ -271,6 +271,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 
 .header-social li:first-child {
 	margin-left: 0;
+	padding-left: 0;
 }
 
 .header-social li a {
@@ -293,7 +294,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 }
 
 .header-social li.instagram img {
-	left: 7px;
+	left: 6px;
 	top: -3px;
 }
 
@@ -515,7 +516,11 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 }
 
 .who-we-are-section .header-social li.facebook img, .who-we-are-section .header-social li.instagram img, .who-we-are-section .header-social li.youtube img, .who-we-are-section .header-social li.twitter img {
-	top: 0;
+	top: 1px;
+}
+
+.who-we-are-section .header-social li:first-child {
+	padding-left: 0;
 }
 
 @media screen and (min-width: 768px) {

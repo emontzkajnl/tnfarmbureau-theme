@@ -94,8 +94,12 @@ a.read-more {
         li {
             &.facebook, &.instagram, &.youtube, &.twitter {
                 img {
-                    top: 0;
+                    top: 1px;
                 }
+            }
+          
+            &:first-child {
+                padding-left: 0;
             }
             
         }
