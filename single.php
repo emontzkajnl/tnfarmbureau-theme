@@ -19,7 +19,7 @@ while ( have_posts() ) :
 				<div class="main-content">
 					<article class="entry-full-content">
 						<div class="row">
-							<div class="<?php echo esc_attr( visualcomposerstarter_get_maincontent_block_class() ); ?>">
+							<div class="<?php //echo esc_attr( visualcomposerstarter_get_maincontent_block_class() ); ?>">
 								<!-- <div class="col-md-2"> -->
 									<?php
 										//get_template_part( 'template-parts/biography' );

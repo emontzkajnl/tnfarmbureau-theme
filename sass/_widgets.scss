@@ -11,6 +11,14 @@
         font-weight: 400;
     }
 }
+.open-widget-vid {
+    cursor: pointer;
+    &.tnfb-widget__title {
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
 .video-widget-popup {
     position: fixed;
     top: 0;
@@ -23,9 +31,9 @@
     justify-content: center;
     align-items: center;
     padding: 30px;
-    &.close-popup {
-        display: none;
-    }
+    // &.close-popup {
+    //     display: none;
+    // }
     .close-widget-popup {
         color: white;
         font-weight: bold;
@@ -33,6 +41,7 @@
         position: absolute;
         top: 50px;
         right: 50px;
+        cursor: pointer;
     }
     iframe {
         max-width: 100%;
