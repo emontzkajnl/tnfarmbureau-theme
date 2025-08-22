@@ -11,3 +11,40 @@
         font-weight: 400;
     }
 }
+.video-widget-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    background-color: rgba($color: #000000, $alpha: .5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    &.close-popup {
+        display: none;
+    }
+    .close-widget-popup {
+        color: white;
+        font-weight: bold;
+        font-size: 2rem;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+    }
+    iframe {
+        max-width: 100%;
+    }
+    // .video-popup-container {
+    //     max-width: 100%;
+    //     width: 600px;
+    //     height: 56%;
+    //     // padding-top: 56%;
+    //     iframe {
+    //         width: 100%;
+    //         height: 100%;   
+    //     }
+    // }
+}

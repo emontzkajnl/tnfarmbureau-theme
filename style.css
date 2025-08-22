@@ -1193,4 +1193,35 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	font-weight: 400;
 }
 
+.video-widget-popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	padding: 30px;
+}
+
+.video-widget-popup.close-popup {
+	display: none;
+}
+
+.video-widget-popup .close-widget-popup {
+	color: white;
+	font-weight: bold;
+	font-size: 2rem;
+	position: absolute;
+	top: 50px;
+	right: 50px;
+}
+
+.video-widget-popup iframe {
+	max-width: 100%;
+}
+
 /*# sourceMappingURL=style.css.map */
