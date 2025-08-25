@@ -8,7 +8,7 @@
  */
 
 ?>
-<div class=" col-md-4 col-lg-3">
+<div class=" col-md-6 col-lg-3">
 <article id="post-<?php the_ID(); ?>" <?php post_class( 'entry-preview' ); ?>>
 	<div class="object-fit-image">
 	<a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?> ">
@@ -20,7 +20,7 @@
 
 	<div class="entry-content">
 
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php the_title( sprintf( '<h2 class="archive-entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
 
 		<?php //the_excerpt();
 		?>

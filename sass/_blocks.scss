@@ -1,5 +1,5 @@
 
-.latest-news-buttons {
+.latest-news-buttons, .archive-news-buttons {
     ul {
         padding-left: 0;
         display: flex;
@@ -307,7 +307,7 @@
             }
         }
     }
-    .latest-news-buttons {
+    .latest-news-buttons, .archive-news-buttons {
         ul {
             flex-direction: row;
             justify-content: center;
