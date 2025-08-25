@@ -56,10 +56,13 @@ get_header(); ?>
                             'post_status'       => 'publish'
                         );
                         $cat_query = new WP_Query($args);
+                        // print_r($cat_query);
+                        $total_posts = $cat_query->found_posts;
+                        $total_pages = ($total_posts + 2) / 8;
                         $count = 1;
                         if ($cat_query->have_posts()) { ?>
                         <div class="archive">
-                            <div class="row">
+                            <div class="row archive-container">
                             <?php while ($cat_query->have_posts()) {
                                 $cat_query->the_post(); 
                                 $layoutClass = $count < 3 ? 'col-md-6' : 'col-md-6 col-lg-3'; ?>
@@ -80,7 +83,16 @@ get_header(); ?>
                             } ?>
                             </div>
                         </div>
-                       <?php }
+                        <?php if ($total_pages > 1) {
+                            echo '<div style="text-align: center;"><button class="load-more-archive" data-cat="'.$current_cat.'" data-total="'.$total_pages.'">More Articles</button></div>';
+                        } ?>
+                        <script>
+                            if (window.current_page == undefined) {
+                                window.current_page = 1;
+                            }
+                        </script>
+                       <?php 
+                        }
 
                         wp_reset_postdata(  );
 						?>
