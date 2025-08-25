@@ -27,6 +27,15 @@
         text-align: center;
         margin-top: 20px;
     }
+    .row.archive-container {
+        margin-left: -25px;
+        margin-right: -25px;
+        [class^="col-"] {
+            padding-right: 25px;
+            padding-left: 25px;
+        }
+
+    }
 }
 .load-more-archive {
     background-color: #707070;

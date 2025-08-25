@@ -559,6 +559,16 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	margin-top: 20px;
 }
 
+.archive .row.archive-container {
+	margin-left: -25px;
+	margin-right: -25px;
+}
+
+.archive .row.archive-container [class^="col-"] {
+	padding-right: 25px;
+	padding-left: 25px;
+}
+
 .load-more-archive {
 	background-color: #707070;
 	color: white;
