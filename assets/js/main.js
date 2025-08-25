@@ -12,10 +12,11 @@
         const data = {
             action: "loadarchives",
             cat,
-            totalPages
+            totalPages,
+            currentPage: window.current_page
         };
         $.ajax({
-            url: params.ajaxurl,
+            url: visualcomposerstarter.ajax_url,
             data: data,
             type: "POST",
             dataType: "html",
@@ -23,6 +24,7 @@
                 if (res) {
                     console.log(res);
                     $('.archive-container').append(res);
+                    window.current_page++;
                 }
             }
         });

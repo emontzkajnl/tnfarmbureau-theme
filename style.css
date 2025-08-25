@@ -559,6 +559,14 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	margin-top: 20px;
 }
 
+.load-more-archive {
+	background-color: #707070;
+	color: white;
+	text-transform: uppercase;
+	font-weight: 400;
+	width: 200px;
+}
+
 .footer-newsletter {
 	background-color: #c41f41;
 	padding-top: 50px;
@@ -965,6 +973,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	opacity: 0;
 	z-index: 0;
 	transition: all 2s;
+	top: 3px;
 	left: 25px;
 	color: #111;
 	text-align: center;

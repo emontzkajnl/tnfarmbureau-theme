@@ -5,6 +5,7 @@
 
 function tnfb_scripts() {
   wp_enqueue_script( 'tnfb-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery') , null, true);
+  // wp_localize_script( 'tnfb-main', $object_name:string, $l10n:array )
 }
 
 add_action( 'wp_enqueue_scripts', 'tnfb_scripts' );
@@ -106,3 +107,43 @@ function get_submenu() {
   }
   return $subItems;
 }
+
+function load_archive_posts() {
+  // for category, author, search 
+  $offset = $_POST['currentPage'] * 8 + 2; // to accomodate two featured posts, use offset instead of pagination
+  $args = array(
+    'post_type'     => 'post',
+    'posts_per_page'  => 8,
+    'offset'        => $offset,
+    'post_status'   => 'publish'
+  );
+  if ($_POST['cat']) {
+		$args['category_name'] = $_POST['cat'];
+	}
+  $cat_query = new WP_Query($args);
+
+  while ($cat_query->have_posts()) {
+    $cat_query->the_post();  ?>
+  <div class="col-md-6 col-lg-3">
+    <article >
+        <div class="object-fit-image">
+        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?> ">
+        <?php //visualcomposerstarter_post_thumbnail(); 
+        the_post_thumbnail();?>
+        </a></div>
+        <div class="entry-content">
+            <?php echo the_date('M j, Y',  '<p class="latest-news__date">','</p>' ); 
+            the_title( sprintf( '<h2 class="archive-entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+        </div><!--.entry-content-->
+    </article><!--.entry-preview-->
+    </div><!-- col-md-4 -->
+    <?php }
+    // wp_reset_postdata(  );
+    wp_die();
+    
+}
+
+add_action('wp_ajax_loadarchives', 'load_archive_posts');
+add_action('wp_ajax_nopriv_loadarchives', 'load_archive_posts');
+
+// loadarchives
