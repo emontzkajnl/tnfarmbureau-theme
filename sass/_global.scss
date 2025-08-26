@@ -4,11 +4,14 @@ html {
 body {
     font-family: roboto, sans-serif;
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: 16px;
     line-height: 1.5;
     // padding-top: 100px;
     &:not(.home) {
         padding-top: 125px;
+    }
+    p {
+        font-size: 1.125rem;
     }
 }
 .object-fit-image {
