@@ -27,10 +27,22 @@ while ( have_posts() ) :
 								<!-- </div>.col-md-2 -->
 								<div class="col-md-12">
 									<?php
+									// CUSTOM BREADCRUMB
+									$cats = get_the_category(); 
+									$primary_cat = get_post_meta(get_the_ID() ,'_yoast_wpseo_primary_category', TRUE ); 
+									$cat_obj = $primary_cat ? get_category($primary_cat) : $cats[0];
+									//term_id, name, parent, get_term_link()
 									
-									if ( function_exists('yoast_breadcrumb') ) {
-									yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-									} ?>
+									echo '<p id="breadcrumbs"><span><span><a href="'.site_url().'">Home</a></span> > ';
+									if ($cat_obj->parent > 0): 
+										$parent_obj = get_category($cat_obj->parent);
+										echo '<span><span><a href="'.get_category_link( $parent_obj->term_id ).'">'.$parent_obj->name.'</a></span> > </span>';
+									endif; 
+									echo '<span class="breadcrumb_last"><a href="'.get_category_link($cat_obj->term_id).'"><strong>'.$cat_obj->name.'</strong></a></span></span></p>';
+									
+									// if ( function_exists('yoast_breadcrumb') ) {
+									// yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
+									// } ?>
 									<?php get_template_part( 'template-parts/content', 'single' );
 
 									// if ( is_singular( 'post' ) ) : ?>
