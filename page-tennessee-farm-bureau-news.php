@@ -51,14 +51,14 @@ get_header(); ?>
                         </div>
                         <?php $args = array(
                             'post_type'         => 'post',
-                            'posts_per_page'    => 10,
+                            'posts_per_page'    => 14,
                             'category_name'     => $current_cat,
                             'post_status'       => 'publish'
                         );
                         $cat_query = new WP_Query($args);
                         // print_r($cat_query);
                         $total_posts = $cat_query->found_posts;
-                        $total_pages = ($total_posts + 2) / 8;
+                        $total_pages = ($total_posts + 2) / 12;
                         $count = 1;
                         if ($cat_query->have_posts()) { ?>
                         <div class="archive">

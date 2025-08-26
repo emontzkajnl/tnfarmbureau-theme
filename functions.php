@@ -41,13 +41,7 @@ add_action('acf/init', function() {
     }
   });
 
-  add_filter( 'wpseo_breadcrumb_links', 'wpseo_breadcrumb_remove_postname' );
-function wpseo_breadcrumb_remove_postname( $links ) {
-  if ( sizeof( $links ) > 1 ) {
-    array_pop( $links );
-  }
-  return $links;
-}
+
 
 function register_child_theme_menus() {
     register_nav_menus( array(
@@ -110,10 +104,10 @@ function get_submenu() {
 
 function load_archive_posts() {
   // for category, author, search 
-  $offset = $_POST['currentPage'] * 8 + 2; // to accomodate two featured posts, use offset instead of pagination
+  $offset = $_POST['currentPage'] * 12 + 2; // to accomodate two featured posts, use offset instead of pagination
   $args = array(
     'post_type'     => 'post',
-    'posts_per_page'  => 8,
+    'posts_per_page'  => 12,
     'offset'        => $offset,
     'post_status'   => 'publish'
   );
