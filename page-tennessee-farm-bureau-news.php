@@ -74,7 +74,7 @@ get_header(); ?>
                                     the_post_thumbnail();?>
                                     </a></div>
                                     <div class="entry-content">
-                                        <?php echo the_date('M j, Y',  '<p class="latest-news__date">','</p>' ); 
+                                        <?php echo '<p class="latest-news__date">'.get_the_date('M j, Y').'</p>'; 
                                         the_title( sprintf( '<h2 class="archive-entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
                                     </div><!--.entry-content-->
                                 </article><!--.entry-preview-->
