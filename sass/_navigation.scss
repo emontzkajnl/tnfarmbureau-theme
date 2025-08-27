@@ -19,6 +19,11 @@
                 }
             }
         }
+        &.current-menu-item {
+            > a {
+                color: black;
+            }
+        }
     }
     .button-close {
         color: black;
@@ -61,7 +66,9 @@
             padding-left: 0;
         }
         a {
-            display: inline-block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background-color: #3b4335;
             width: 30px;
             height: 30px;
@@ -71,40 +78,41 @@
         }
         img {
             height: 20px;
-            position: relative;
+            // position: relative;
         }
-        &.facebook {
-            img {
-                left: 8px;
-                top: -3px;
-            }
-        }
-        &.instagram {
-            img {
-                left: 6px;
-                top: -3px;
-            }
-        }
-        &.youtube {
-            img {
-                left: 4px;
-                top: -3px;
-            }
-        }
-        &.twitter {
-            img {
-                left: 5px;
-                top: -3px;
-            }
-        }
+        // &.facebook {
+        //     img {
+        //         left: 8px;
+        //         top: -3px;
+        //     }
+        // }
+        // &.instagram {
+        //     img {
+        //         left: 6px;
+        //         top: -3px;
+        //     }
+        // }
+        // &.youtube {
+        //     img {
+        //         left: 4px;
+        //         top: -3px;
+        //     }
+        // }
+        // &.twitter {
+        //     img {
+        //         left: 5px;
+        //         top: -3px;
+        //     }
+        // }
     }
 }
 .secondary-nav-container {
     display: none;
 }
+
 .navbar-toggle {
     .icon-bar {
-        background-color: white;
+        background-color: #000;
     }
 }
 .navbar-wrapper {
@@ -112,6 +120,26 @@
 }
 .voa-logo {
     display: none;
+}
+.home {
+    .navbar-toggle {
+        .icon-bar {
+            background-color: white;
+        }
+    }
+    #main-menu {
+        ul {
+            li {
+                &.current-menu-item {
+                    > a {
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+
+    // #main-menu ul li.current-menu-item > a
 }
 @media only screen and (min-width: 768px) {
     body {
