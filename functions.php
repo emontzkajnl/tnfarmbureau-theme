@@ -140,4 +140,10 @@ function load_archive_posts() {
 add_action('wp_ajax_loadarchives', 'load_archive_posts');
 add_action('wp_ajax_nopriv_loadarchives', 'load_archive_posts');
 
-// loadarchives
+function change_posts_per_page( $query ) {
+  if ( !is_admin() && $query->is_main_query() && is_archive(  ) ) {
+      $query->set( 'posts_per_page', 14 );
+  }
+}
+add_action( 'pre_get_posts', 'change_posts_per_page' );
+

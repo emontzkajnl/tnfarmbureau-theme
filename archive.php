@@ -16,41 +16,47 @@ get_header(); ?>
 						<div class="entry-content archive">
 							<?php
                             $q = get_queried_object(  );
-                            echo '<h1 class="section-heading">'.$q->cat_name.'</h1>';
+							$query_vars = $wp_query->query_vars; 
+							// print_r($query_vars);
+							if (is_category()) {
+								echo '<h1 class="section-heading">'.$q->cat_name.'</h1>';
+							} elseif (is_author()) {
+								echo '<h1 class="section-heading">Articles by '.get_the_author().'</h1>';
+							} else {
+								the_archive_title( '<h1 class="section-heading">', '</h1>');
+							}
+                           
 								// the_archive_title( '<h1>', '</h1>' );
 							?>
 						</div><!--.entry-content-->
 						<div class="archive">
-							<?php if ( have_posts() ) : ?>
-                                <div class="row">
+							<?php if ( have_posts() ) : 
+								$total_posts = $wp_query->found_posts;
+								$total_pages = ($total_posts + 2) / 12;
+								$count = 1; ?>
+                                <div class="row archive-container">
 								<?php
 								// Start the loop.
 								while ( have_posts() ) : the_post();
-
+								$layoutClass = $count < 3 ? 'col-md-6' : 'col-md-6 col-lg-3'; 
+								echo '<div class="'.$layoutClass.'">';
 									/*
 									 * Include the Post-Format-specific template for the content.
 									 * If you want to override this in a child theme, then include a file
 									 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
 									 */
 									get_template_part( 'template-parts/content', get_post_format() );
-
+									echo '</div>'; // layout class
+									$count++;
 									// End the loop.
 								endwhile;
                                 
 								?>
-                                </div> <!-- vc_row -->
-								<div class="pagination">
-									<h2 class="screen-reader-text"><?php esc_html__( 'Post navigation', 'visual-composer-starter' ); ?></h2>
-									<div class="nav-links archive-navigation">
-										<?php
-										// Previous/next page navigation.
-										the_posts_pagination( array(
-											'screen_reader_text' => '',
-											'before_page_number' => '<span class="meta-nav screen-reader-text">' . esc_html__( 'Page', 'visual-composer-starter' ) . '</span>',
-										) );
-										?>
-									</div><!--.nav-links archive-navigation-->
-								</div><!--.pagination-->
+                                </div> <!-- row -->
+								<?php if ($total_pages > 1) {
+                            		echo '<div style="text-align: center;"><button class="load-more-archive" data-cat="'.$current_cat.'" data-total="'.$total_pages.'">More Articles</button></div>';
+                        		} ?>
+							
 							<?php
 
 							// If no content, include the "No posts found" template.
@@ -58,7 +64,7 @@ get_header(); ?>
 								get_template_part( 'template-parts/content', 'none' );
 
 							endif;
-
+							
 							?>
 
 						</div><!--.archive-->
