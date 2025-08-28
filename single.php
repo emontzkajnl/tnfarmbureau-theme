@@ -15,7 +15,7 @@ while ( have_posts() ) :
 <div class="<?php echo esc_attr( visualcomposerstarter_get_content_container_class() ); ?>">
 	<div class="content-wrapper">
 		<div class="row">
-			<div class="col-md-9">
+			<!-- <div class="col-md-9"> -->
 				<div class="main-content">
 					<article class="entry-full-content">
 						<div class="row">
@@ -80,10 +80,10 @@ while ( have_posts() ) :
 						</div><!--.row-->
 					</article><!--.entry-full-content-->
 				</div><!--.main-content-->
-			</div>
-			<div class="col-md-3">
-								<?php get_sidebar(); ?>
-								</div>
+			<!-- </div> -->
+			<?php if ( visualcomposerstarter_get_sidebar_class() ) : ?>
+				<?php get_sidebar(); ?>
+			<?php endif; ?>
 		</div><!--.row-->
 	</div><!--.content-wrapper-->
 </div><!--.<?php echo esc_html( visualcomposerstarter_get_content_container_class() ); ?>-->
