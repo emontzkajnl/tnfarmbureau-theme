@@ -1,0 +1,82 @@
+{
+    "key": "group_5bb263c6a9cf9",
+    "title": "Articles",
+    "fields": [
+        {
+            "key": "field_5724934fc9e2e",
+            "label": "Disable Date",
+            "name": "disable_date",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Dates are displayed on pages and posts by default. Tick this box to disable the date on this post or page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "disabled": "Disable",
+                "enable": "Enable"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "enable",
+            "layout": "horizontal",
+            "allow_null": 0,
+            "return_format": "value"
+        },
+        {
+            "key": "field_56ef1ba21ecdf",
+            "label": "Disable Share Tools",
+            "name": "disable_share_tools",
+            "aria-label": "",
+            "type": "radio",
+            "instructions": "Share tools are displayed on pages and posts by default. Tick this box to disable share tools on this post or page.",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "disabled": "Disable",
+                "enable": "Enable"
+            },
+            "other_choice": 0,
+            "save_other_choice": 0,
+            "default_value": "enable",
+            "layout": "horizontal",
+            "allow_null": 0,
+            "return_format": "value"
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "post"
+            }
+        ],
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "page"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "normal",
+    "style": "seamless",
+    "label_placement": "top",
+    "instruction_placement": "label",
+    "hide_on_screen": "",
+    "active": true,
+    "description": "",
+    "show_in_rest": 0,
+    "modified": 1756483000
+}
