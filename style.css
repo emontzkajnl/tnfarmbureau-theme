@@ -865,7 +865,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 }
 
 .tnfb-publication__text-container {
-	padding: 40px 0 40px 40px;
+	padding: 40px 0 0 40px;
 }
 
 .tnfb-publication__title {
@@ -1057,6 +1057,9 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 	}
 	.news-ticker__post {
 		text-align: left;
+	}
+	.tnfb-publication__text-container {
+		padding: 40px 0 40px 40px;
 	}
 }
 
