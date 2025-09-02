@@ -73,25 +73,52 @@ function hide_add_to_cart_for_featured_products_loop($html, $product, $args) {
 }
 
 function get_submenu() {
+  // echo 'post type '.get_post_type();
+  if (get_post_type() != 'post') {
+    return;
+  }
   $main_nav_menu = wp_get_nav_menu_items('New Main Nav');
+  $menuParent = null;
+  $subItems = [];
+  // echo '<pre>';
+  // print_r($main_nav_menu);
+  // echo '</pre>';
   if (is_archive()) {
     $q = get_queried_object( );
     $postID = $q->term_id;
-  } else {
-    $postID = get_the_ID();
-  }
-  $menuParent = null;
-  $subItems = [];
-  foreach ($main_nav_menu as $key => $value) {
-    if ($value->object_id == $postID) {
-      if ($value->menu_item_parent > 0) {
-        $menuParent = $value->menu_item_parent;
-      } else {
-        $menuParent = $value->ID;
+    foreach ($main_nav_menu as $key => $value) {
+      if ($value->object_id == $postID) {
+        if ($value->menu_item_parent > 0) {
+          $menuParent = $value->menu_item_parent;
+        } else {
+          $menuParent = $value->ID;
+        }
+        break; 
       }
-      break; 
     }
+  } else {
+    
+    $postID = get_the_ID();
+    $catArray = get_the_category($postID); //array of cat obj, need term_id
+    foreach ($main_nav_menu as $key => $value) {
+      if ($value->object == 'category') {
+        foreach ($catArray as $cat) {
+          if ($value->object_id == $cat->term_id) {
+            if ($value->menu_item_parent > 0) {
+              $menuParent = $value->menu_item_parent;
+            } else {
+              $menuParent = $value->ID;
+            }
+            break; 
+          }
+        }
+      }
+    }
+    // echo '<pre>';
+    // print_r($catArray);
+    // echo '</pre>';
   }
+
   if ($menuParent == null) {return;} 
   // echo 'menu parent is '.$menuParent;
   foreach ($main_nav_menu as $key => $value) {
