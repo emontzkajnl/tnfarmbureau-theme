@@ -74,9 +74,9 @@ function hide_add_to_cart_for_featured_products_loop($html, $product, $args) {
 
 function get_submenu() {
   // echo 'post type '.get_post_type();
-  if (get_post_type() != 'post') {
-    return;
-  }
+  // if (get_post_type() != 'post') {
+  //   return;
+  // }
   $main_nav_menu = wp_get_nav_menu_items('New Main Nav');
   $menuParent = null;
   $subItems = [];
@@ -96,7 +96,7 @@ function get_submenu() {
         break; 
       }
     }
-  } else {
+  } elseif( is_single() &&  get_post_type() == 'post') {
     
     $postID = get_the_ID();
     $catArray = get_the_category($postID); //array of cat obj, need term_id
@@ -114,9 +114,20 @@ function get_submenu() {
         }
       }
     }
-    // echo '<pre>';
-    // print_r($catArray);
-    // echo '</pre>';
+  } elseif(get_post_type() == 'page') {
+    $postID = get_the_ID();
+    foreach ($main_nav_menu as $key => $value) {
+      if ($value->object_id == $postID) {
+        if ($value->menu_item_parent > 0) {
+          $menuParent = $value->menu_item_parent;
+        } else {
+          $menuParent = $value->ID;
+        }
+        break; 
+      }
+    }
+  } else {
+    return; 
   }
 
   if ($menuParent == null) {return;} 
