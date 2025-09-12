@@ -17,7 +17,7 @@ get_header(); ?>
 							<?php
                             $q = get_queried_object(  );
 							$query_vars = $wp_query->query_vars; 
-							// print_r($query_vars);
+							
 							if (is_category()) {
 								echo '<h1 class="section-heading">'.$q->cat_name.'</h1>';
 							} elseif (is_author()) {
@@ -57,7 +57,7 @@ get_header(); ?>
 									<script>
 										window.current_page = 1;
 									</script>
-                            		<?php echo '<div style="text-align: center;"><button class="load-more-archive" data-cat="'.$q->cat_name.'" data-total="'.$total_pages.'">More Articles</button></div>';
+                            		<?php echo '<div style="text-align: center;"><button class="load-more-archive" data-cat="'.$q->term_id.'" data-total="'.$total_pages.'">More Articles</button></div>';
                         		} ?>
 							
 							<?php

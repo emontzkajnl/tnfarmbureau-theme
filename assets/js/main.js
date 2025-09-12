@@ -8,7 +8,7 @@
     $('.load-more-archive').on('click', function() {
         const button = $(this);
         const cat = button.data('cat');
-        const totalPages = button.data('total_pages');
+        const totalPages = button.data('total');
         const data = {
             action: "loadarchives",
             cat,

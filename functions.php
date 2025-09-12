@@ -150,7 +150,7 @@ function load_archive_posts() {
     'post_status'   => 'publish'
   );
   if ($_POST['cat']) {
-		$args['category_name'] = $_POST['cat'];
+		$args['cat'] = $_POST['cat'];
 	}
   $cat_query = new WP_Query($args);
 
