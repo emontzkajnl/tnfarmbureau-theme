@@ -53,8 +53,11 @@ get_header(); ?>
                                 
 								?>
                                 </div> <!-- row -->
-								<?php if ($total_pages > 1) {
-                            		echo '<div style="text-align: center;"><button class="load-more-archive" data-cat="'.$current_cat.'" data-total="'.$total_pages.'">More Articles</button></div>';
+								<?php if ($total_pages > 1) { ?>
+									<script>
+										window.current_page = 1;
+									</script>
+                            		<?php echo '<div style="text-align: center;"><button class="load-more-archive" data-cat="'.$q->cat_name.'" data-total="'.$total_pages.'">More Articles</button></div>';
                         		} ?>
 							
 							<?php
