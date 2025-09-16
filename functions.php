@@ -80,9 +80,7 @@ function get_submenu() {
   $main_nav_menu = wp_get_nav_menu_items('New Main Nav');
   $menuParent = null;
   $subItems = [];
-  // echo '<pre>';
-  // print_r($main_nav_menu);
-  // echo '</pre>';
+
   if (is_archive()) {
     $q = get_queried_object( );
     $postID = $q->term_id;
@@ -97,7 +95,6 @@ function get_submenu() {
       }
     }
   } elseif( is_single() &&  get_post_type() == 'post') {
-    
     $postID = get_the_ID();
     $catArray = get_the_category($postID); //array of cat obj, need term_id
     foreach ($main_nav_menu as $key => $value) {

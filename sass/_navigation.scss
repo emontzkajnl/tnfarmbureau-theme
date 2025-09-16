@@ -174,9 +174,12 @@
                         }
                     }
                     &.sub-menu {
+                        width: max-content;
                         li {
+                            width: 100%;
                             a {
                                 color: #000;
+                                white-space: nowrap;
                                 &:hover {
                                     color: $maroon;
                                 }

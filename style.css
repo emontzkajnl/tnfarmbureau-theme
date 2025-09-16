@@ -352,8 +352,15 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	body:not(.menu-sandwich) #main-menu ul li.menu-item-has-children > a:before {
 		content: '';
 	}
+	body:not(.menu-sandwich) #main-menu ul.sub-menu {
+		width: max-content;
+	}
+	body:not(.menu-sandwich) #main-menu ul.sub-menu li {
+		width: 100%;
+	}
 	body:not(.menu-sandwich) #main-menu ul.sub-menu li a {
 		color: #000;
+		white-space: nowrap;
 	}
 	body:not(.menu-sandwich) #main-menu ul.sub-menu li a:hover {
 		color: #C41F41;
