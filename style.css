@@ -400,7 +400,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 		display: flex;
 		flex-direction: row;
 		justify-content: space-around;
-		max-width: 840px;
+		max-width: 1440px;
 		margin: 10px auto;
 	}
 	.secondary-nav li {
