@@ -245,6 +245,9 @@
         display: block;
         background-color: $maroon;
         width: 100%;
+        > .container {
+            max-width: 1440px;
+        }
     }
     .secondary-nav {
         display: flex;

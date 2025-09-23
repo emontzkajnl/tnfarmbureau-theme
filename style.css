@@ -174,7 +174,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 	position: relative;
 	top: 7px;
 	margin-left: 5px;
-	margin-right: 5px;
+	margin-right: 30px;
 	height: 30px;
 }
 
@@ -221,7 +221,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
 		margin-left: 15px;
 	}
 	.search-form-dropdown {
-		top: -2px;
+		top: 0;
 	}
 }
 
@@ -396,6 +396,9 @@ body.header-full-width #header .navbar .navbar-wrapper {
 		background-color: #C41F41;
 		width: 100%;
 	}
+	.secondary-nav-container > .container {
+		max-width: 1440px;
+	}
 	.secondary-nav {
 		display: flex;
 		flex-direction: row;
@@ -501,7 +504,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 }
 
 .page-template .entry-title, .page-template-default .entry-title {
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid #111;
 	padding-bottom: 30px;
 }
 
@@ -535,6 +538,10 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
 
 .who-we-are-section .header-social li:first-child {
 	padding-left: 0;
+}
+
+.sidebar-widget-area .widget:first-child {
+	border-top: none;
 }
 
 @media screen and (min-width: 768px) {
