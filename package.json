@@ -17,10 +17,10 @@
         "url": "https://github.com/Automattic/_s/issues"
     },
     "devDependencies": {
-        "@wordpress/scripts": "^30.16.0",
-        "dir-archiver": "^1.1.1",
-        "node-sass": "^9.0.0",
-        "rtlcss": "^3.5.0"
+        "@wordpress/scripts": "^31.1.0",
+        "dir-archiver": "^2.1.0",
+        "rtlcss": "^4.3.0",
+        "sass": "^1.94.2"
     },
     "rtlcssConfig": {
         "options": {
@@ -36,8 +36,8 @@
         "map": false
     },
     "scripts": {
-        "watch": "node-sass sass/ -o ./ --source-map true --output-style expanded --indent-type tab --indent-width 1 -w",
-        "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
+        "watch": "sass --watch sass/:./ --style expanded --no-charset",
+        "compile:css": "sass sass/:./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
         "compile:rtl": "rtlcss style.css style-rtl.css",
         "lint:scss": "wp-scripts lint-style 'sass/**/*.scss'",
         "lint:js": "wp-scripts lint-js 'js/*.js'",

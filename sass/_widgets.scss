@@ -1,7 +1,9 @@
+@use "colors";
+
 .tnfb-widget {
     text-align: center;
     &__cta {
-        color: $maroon;
+        color: colors.$maroon;
         font-size: 1rem;
         font-weight: bold;
         margin-top: .6rem

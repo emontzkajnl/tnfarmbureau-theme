@@ -1,3 +1,5 @@
+@use "colors";
+
 #breadcrumbs {
     font-size: 1rem;
     text-align: center;
@@ -6,7 +8,7 @@
         color: inherit;
     }
     .breadcrumb_last {
-        color: $maroon;
+        color: colors.$maroon;
     }
 }
 .entry-title {
@@ -33,7 +35,7 @@
     font-family: Roboto, sans-serif;
     font-weight: bold;
     font-size: 1.25rem;
-    color: $maroon;
+    color: colors.$maroon;
     a {
         color: inherit;
         text-decoration: none;
@@ -46,7 +48,7 @@
 }
 a.read-more {
     color: white;
-    background-color: $darkblue;
+    background-color: colors.$darkblue;
     display: inline-block;
     padding: 5px 10px;
     text-decoration: none;

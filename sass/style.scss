@@ -14,20 +14,20 @@ Tags: blog, portfolio, featured-images, full-width-template, e-commerce, transla
 Text Domain: tnfb
 */
 
-@import "colors";
-@import "utilities";
+@use "colors";
+@use "utilities";
 // @import "fonts";
-@import "global";
-@import "headings";
-@import "header";
-@import "navigation";
-@import "pagesandposts";
-@import "archive";
-@import "footer";
-@import "blocks";
-@import "shortcode_blocks";
-@import "woocommerce";
-@import "widgets";
+@use "global";
+@use "headings";
+@use "header";
+@use "navigation";
+@use "pagesandposts";
+@use "archive";
+@use "footer";
+@use "blocks";
+@use "shortcode_blocks";
+@use "woocommerce";
+@use "widgets";
 // @import "pagesandposts";
 // @import "archive";
 // @import "comments";
