@@ -21,4 +21,9 @@
         <a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_twitter', '' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/social-icons/twitter.svg" /></a>
     </li>
 <?php endif; ?>
+<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_tiktok', '' ) ) ) : ?>
+    <li class="tiktok">
+        <a href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_tiktok', '' ) ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/images/social-icons/tiktok.svg" /></a>
+    </li>
+<?php endif; ?>
 </ul>
