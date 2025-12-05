@@ -12,7 +12,8 @@ if ( visualcomposerstarter_is_the_footer_displayed() ) : ?>
 	<div class="footer-newsletter">
 		<div class="container">
 			<h3 class="footer-newsletter__in-the-loop">In the Loop</h3>
-			<p class="footer-newsletter__description">Sign up for our newsletter to stay “In the Loop” on issues facing the agriculture industry, rural Tennessee and specifically, Tennessee Farm Bureau. </p>
+			<div class="footer-newsletter__description"><?php echo the_field('in_the_loop_text', 'options'); ?></div>
+			<div class="footer-newsletter__first-button"><a href="/calendar" class="footer-newsletter__button">Calendar</a></div>
 			<div><a href="/in-the-loop-newsletter" class="footer-newsletter__button">Newsletter Signup</a></div>
 			</div>
 	</div>
