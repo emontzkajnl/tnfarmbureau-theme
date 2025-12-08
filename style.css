@@ -588,6 +588,33 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
   padding: 60px 0 30px;
 }
 
+.footer-social {
+  padding-left: 0;
+  flex-direction: row;
+  margin-top: 10px;
+}
+.footer-social li {
+  list-style: none;
+  margin-left: 10px;
+}
+.footer-social li:first-child {
+  margin-left: 0;
+  padding-left: 0;
+}
+.footer-social li a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border-bottom: none;
+}
+.footer-social li img {
+  height: 20px;
+}
+
 .footer-menu ul li {
   display: block;
   text-transform: uppercase;

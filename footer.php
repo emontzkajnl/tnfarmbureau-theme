@@ -50,59 +50,9 @@ if ( visualcomposerstarter_is_the_footer_displayed() ) : ?>
 					<div>
 						<p style="text-align: center;">Stay Connected!</p>
 						<div class="footer-socials">
-							<ul>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_facebook', '' ) ) ) : ?>
-									<li>
-										<a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_facebook', '' ) ); ?>"><span class="vct-icon-facebook-with-circle"></span></a>
-									</li>
-								<?php endif; ?>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_twitter', '' ) ) ) : ?>
-									<li>
-										<a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_twitter', '' ) ); ?>"><span class="vct-icon-twitter-with-circle"></span></a>
-									</li>
-								<?php endif; ?>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_linkedin', '' ) ) ) : ?>
-									<li>
-										<a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_linkedin', '' ) ); ?>"><span class="vct-icon-linkedin-with-circle"></span></a>
-									</li>
-								<?php endif; ?>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_instagram', '' ) ) ) : ?>
-									<li>
-										<a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_instagram', '' ) ); ?>"><span class="vct-icon-instagram-with-circle"></span></a>
-									</li>
-								<?php endif; ?>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_pinterest', '' ) ) ) : ?>
-									<li>
-										<a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_pinterest', '' ) ); ?>"><span class="vct-icon-pinterest-with-circle"></span></a>
-									</li>
-								<?php endif; ?>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_youtube', '' ) ) ) : ?>
-									<li>
-										<a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_youtube', '' ) ); ?>"><span class="vct-icon-youtube-with-circle"></span></a>
-									</li>
-								<?php endif; ?>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_vimeo', '' ) ) ) : ?>
-									<li>
-										<a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_vimeo', '' ) ); ?>"><span class="vct-icon-vimeo-with-circle"></span></a>
-									</li>
-								<?php endif; ?>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_flickr', '' ) ) ) : ?>
-									<li>
-										<a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_flickr', '' ) ); ?>"><span class="vct-icon-flickr-with-circle"></span></a>
-									</li>
-								<?php endif; ?>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_github', '' ) ) ) : ?>
-									<li>
-										<a target="_blank" rel="noreferrer" href="<?php echo esc_url( get_theme_mod( 'vct_footer_area_social_link_github', '' ) ); ?>"><span class="vct-icon-github-with-circle"></span></a>
-									</li>
-								<?php endif; ?>
-								<?php if ( strlen( get_theme_mod( 'vct_footer_area_social_link_email', '' ) ) ) : ?>
-									<li>
-										<a href="<?php echo esc_url( 'mailto:' . antispambot( get_theme_mod( 'vct_footer_area_social_link_email', '' ) ) ); ?>"><span class="vct-icon-mail-circle"></span></a>
-									</li>
-								<?php endif; ?>
-
-							</ul>
+							<?php
+							get_template_part( 'template-parts/footer-social', );
+							?>
 							</div>
 						</div>
 					</div>

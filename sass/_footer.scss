@@ -47,6 +47,36 @@
 .footer-bottom {
     padding: 60px 0 30px;
 }
+.footer-social {
+    padding-left: 0;
+    flex-direction: row;
+    margin-top: 10px;
+    
+    li {
+        list-style: none;
+        margin-left: 10px;
+        &:first-child {
+            margin-left: 0;
+            padding-left: 0;
+        }
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            border-bottom: none;
+
+        }
+        img {
+            height: 20px;
+            // position: relative;
+        }
+ 
+    }
+}
 .footer-menu {
     ul {
         li {
