@@ -21,11 +21,17 @@
 	<div class="entry-content">
 		<?php if (function_exists('the_powerpress_content')) {
 			if (is_category('podcast')) {
+				
 				the_powerpress_content('podcast');
+				echo get_the_excerpt(  );
 			} elseif (is_category( 'farm-bureau-on-the-hill' )) {
+				
 				the_powerpress_content('farm-bureau-on-the-hill-podcast');
+				echo get_the_excerpt(  );
 			} elseif (is_category( 'root-of-the-matter' )) {
+				
 				the_powerpress_content('root-of-the-matter-podcast');
+				echo get_the_excerpt(  );
 			}
 		}
 		?>
