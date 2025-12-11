@@ -559,7 +559,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
   font-family: "santelia-rough-two", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 4rem;
+  font-size: 3rem;
   color: white;
   text-align: center;
 }
@@ -577,7 +577,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
   font-size: 1.125rem;
   font-family: "Open Sans", sans-serif;
   min-width: 250px;
-  padding: 20px;
+  padding: 10px;
 }
 .footer-newsletter__first-button {
   margin-right: 0;
