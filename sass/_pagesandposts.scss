@@ -117,6 +117,14 @@ a.read-more {
         }
     }
 }
+.ui-autocomplete {
+    li {
+        background-color: white;
+        list-style: none;
+        color: black;
+        
+    }
+}
 @media screen and (min-width: 768px) {
     .entry-content p.home-see-all-link {
         position: absolute;

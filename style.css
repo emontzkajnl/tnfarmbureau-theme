@@ -498,6 +498,12 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
   border-top: none;
 }
 
+.ui-autocomplete li {
+  background-color: white;
+  list-style: none;
+  color: black;
+}
+
 @media screen and (min-width: 768px) {
   .entry-content p.home-see-all-link {
     position: absolute;
