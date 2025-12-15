@@ -506,6 +506,7 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
   list-style: none;
   color: black;
   font-size: 1.2rem;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
@@ -573,10 +574,18 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
   color: white;
   text-align: center;
 }
+.footer-newsletter__in-the-loop a {
+  color: white;
+  cursor: pointer;
+}
+.footer-newsletter__in-the-loop a:hover, .footer-newsletter__in-the-loop a:visited {
+  color: inherit;
+}
 .footer-newsletter__description p {
   color: #fff;
-  text-align: center;
+  text-align: left;
   font-size: 1rem;
+  margin-bottom: 0;
 }
 .footer-newsletter__button {
   display: inline-block;

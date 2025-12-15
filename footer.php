@@ -11,10 +11,10 @@ if ( visualcomposerstarter_is_the_footer_displayed() ) : ?>
 	<?php visualcomposerstarter_hook_before_footer(); ?>
 	<div class="footer-newsletter">
 		<div class="container">
-			<h3 class="footer-newsletter__in-the-loop">In the Loop</h3>
+			<h3 class="footer-newsletter__in-the-loop"><a href="/in-the-loop-newsletter">In the Loop</a></h3>
 			<div class="footer-newsletter__description"><?php echo the_field('in_the_loop_text', 'options'); ?></div>
-			<div class="footer-newsletter__first-button"><a href="/calendar" class="footer-newsletter__button">Calendar</a></div>
-			<div><a href="/in-the-loop-newsletter" class="footer-newsletter__button">Newsletter</a></div>
+			<div class="footer-newsletter__first-button"><a href="/in-the-loop-newsletter" class="footer-newsletter__button">Newsletter</a></div>
+			<div><a href="/calendar" class="footer-newsletter__button">Calendar</a></div>
 			</div>
 	</div>
 	<footer id="footer">

@@ -17,14 +17,21 @@
         font-size: 3rem;
         color: white;
         text-align: center;
-        
-        
+        a {
+            color: white;
+            cursor: pointer;
+            &:hover, &:visited {
+                color: inherit;
+            }
+        }
     }
     &__description {
         p {
             color: #fff;
-            text-align: center;
+            text-align: left;
             font-size: 1rem;
+            margin-bottom: 0;
+            
         }
         
     }
