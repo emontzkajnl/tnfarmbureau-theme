@@ -4,8 +4,10 @@
 // visualcomposerstarter-general
 
 function tnfb_scripts() {
-  wp_enqueue_script( 'tnfb-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery') , null, true);
-  // wp_localize_script( 'tnfb-main', $object_name:string, $l10n:array )
+  wp_enqueue_script( 'tnfb-main', get_stylesheet_directory_uri() . '/assets/js/main.js', array('jquery', 'jquery-ui-autocomplete') , null, true);
+  wp_localize_script( 'tnfb-main', 'params', array(
+    'ajaxurl' => site_url() . '/wp-admin/admin-ajax.php'
+  ) );
 }
 
 add_action( 'wp_enqueue_scripts', 'tnfb_scripts' );
@@ -182,3 +184,26 @@ function change_posts_per_page( $query ) {
 }
 add_action( 'pre_get_posts', 'change_posts_per_page' );
 
+function return_county_list() {
+  $county_objects = array();
+  $county_args = array(
+    'post_type'   => 'post',
+    'cat'         => 47,
+    'posts_per_page'  => -1
+  );
+  $county_query = new WP_Query($county_args);
+  if ($county_query->have_posts()) {
+    while ($county_query->have_posts()) {
+      $county_query->the_post();
+      $title = get_the_title();
+      $link = get_the_permalink( );
+      $county_objects[] = array($title, $link);
+    }
+ 
+  } 
+  wp_send_json_success($county_objects);
+		wp_die();
+}
+
+add_action('wp_ajax_createCountyList', 'return_county_list');
+add_action('wp_ajax_nopriv_createCountyList', 'return_county_list');
