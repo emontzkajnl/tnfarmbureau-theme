@@ -172,6 +172,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
   min-width: 270px;
   display: none;
   top: 60px;
+  left: -200px;
 }
 .search-form-dropdown.open .search-form {
   display: block;
@@ -203,6 +204,9 @@ body.header-full-width #header .navbar .navbar-wrapper {
   }
   .search-form-dropdown {
     top: 0;
+  }
+  .search-form-dropdown .search-form {
+    left: 0;
   }
 }
 #main-menu {

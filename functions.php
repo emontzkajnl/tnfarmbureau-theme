@@ -207,3 +207,63 @@ function return_county_list() {
 
 add_action('wp_ajax_createCountyList', 'return_county_list');
 add_action('wp_ajax_nopriv_createCountyList', 'return_county_list');
+
+
+function custom_search_category_deprioritization( $query ) {
+  // Only apply this logic on the front-end search page
+  if ( $query->is_search() && $query->is_main_query() ) {
+
+      // 1. Define the Category IDs to De-prioritize
+      // IMPORTANT: Replace these with the actual IDs of your categories
+      $deprioritize_cat_ids = array( 45, 92, 156 );
+      $cat_ids_string = implode( ',', array_map( 'intval', $deprioritize_cat_ids ) );
+
+      // 2. Add the JOIN to link posts to their categories
+      add_filter( 'posts_join', 'custom_search_join_category' );
+
+      // 3. Add the ORDER BY clause to de-prioritize the posts
+      add_filter( 'posts_search_orderby', function( $orderby ) use ( $cat_ids_string ) {
+          global $wpdb;
+
+          // This SQL adds a temporary field called 'category_priority'.
+          // If a post is in one of the categories, 'category_priority' is set to 1.
+          // Otherwise (for all other posts), it is set to 0.
+          $priority_sql = "
+              (CASE WHEN $wpdb->posts.ID IN (
+                  SELECT object_id
+                  FROM $wpdb->term_relationships
+                  WHERE term_taxonomy_id IN ({$cat_ids_string})
+              ) THEN 1 ELSE 0 END)
+          ";
+
+          // We order by 'category_priority' first (ASC), meaning 0s (high priority) come before 1s (low priority).
+          // Then, we append the original sorting (usually relevance or date).
+          $new_orderby = "{$priority_sql} ASC, " . $orderby;
+          
+          return $new_orderby;
+      });
+
+      // Ensure we only join once and remove the filter after use
+      add_filter( 'posts_clauses', 'custom_remove_join_filter', 10, 1 );
+  }
+}
+add_action( 'pre_get_posts', 'custom_search_category_deprioritization' );
+
+
+// Filter to handle JOIN removal after the query has run
+function custom_remove_join_filter( $clauses ) {
+  remove_filter( 'posts_join', 'custom_search_join_category' );
+  return $clauses;
+}
+
+// Filter to JOIN the necessary tables (Term Relationships and Taxonomy)
+function custom_search_join_category( $join ) {
+  global $wpdb;
+
+  // Only join if we haven't already and the query is for search
+  if ( ! strstr( $join, $wpdb->term_relationships ) ) {
+      $join .= " LEFT JOIN $wpdb->term_relationships ON $wpdb->posts.ID = $wpdb->term_relationships.object_id ";
+      $join .= " LEFT JOIN $wpdb->term_taxonomy ON $wpdb->term_relationships.term_taxonomy_id = $wpdb->term_taxonomy.term_taxonomy_id ";
+  }
+  return $join;
+}
