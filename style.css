@@ -498,10 +498,14 @@ a.read-more:hover, a.read-more:visited, a.read-more:focus {
   border-top: none;
 }
 
+.ui-autocomplete {
+  padding-left: 0;
+}
 .ui-autocomplete li {
   background-color: white;
   list-style: none;
   color: black;
+  font-size: 1.2rem;
 }
 
 @media screen and (min-width: 768px) {
