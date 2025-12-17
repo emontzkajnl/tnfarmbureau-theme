@@ -73,6 +73,10 @@ body p {
   bottom: 0;
 }
 
+.entry-content ul > li {
+  list-style: unset;
+  padding-left: 5px;
+}
 .entry-content ul > li:before {
   content: "";
   display: none;
@@ -237,7 +241,7 @@ body.header-full-width #header .navbar .navbar-wrapper {
   display: none;
 }
 #main-menu.open ul.sub-menu li {
-  text-indent: 10px;
+  margin-left: 10px;
 }
 #main-menu.open ul.sub-menu li a {
   color: black;

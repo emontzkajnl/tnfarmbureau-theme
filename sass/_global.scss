@@ -30,6 +30,8 @@ body {
 .entry-content {
     ul {
         > li {
+            list-style: unset;
+            padding-left: 5px;
             &:before { // undo silliness added by visual composer styles
                 content: '';
                 display: none;
