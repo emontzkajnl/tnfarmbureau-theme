@@ -19,12 +19,14 @@
             url: params.ajaxurl,
             data: data,
             type: "POST",
-            dataType: "JSON",
+            dataType: "html",
             success: function(res) {
                 if (res) {
-                    console.log(res);
                     $('.archive-container').append(res);
                     window.current_page++;
+                    if (window.current_page > totalPages) {
+                        button.remove();
+                    }
                 }
             }
         });
@@ -61,8 +63,8 @@
             }
         })
     }
-    // if (document.body.contains('home')) {
+    if ($('body').hasClass('home')) {
         createCountyList();
-    // }
+    }
     
 })(jQuery);

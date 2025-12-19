@@ -83,6 +83,7 @@ function get_submenu() {
   $menuParent = null;
   $subItems = [];
 
+
   if (is_archive()) {
     $q = get_queried_object( );
     $postID = $q->term_id;
