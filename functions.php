@@ -141,6 +141,7 @@ function get_submenu() {
 }
 
 function load_archive_posts() {
+  
   // for category, author, search 
   $offset = $_POST['currentPage'] * 12 + 2; // to accomodate two featured posts, use offset instead of pagination
   $args = array(
@@ -164,6 +165,22 @@ function load_archive_posts() {
         the_post_thumbnail();?>
         </a></div>
         <div class="entry-content">
+        <?php
+        if (function_exists('the_powerpress_content')) {
+          if ($_POST['cat'] == 45) {
+            the_powerpress_content('podcast');
+            echo get_the_excerpt(  );
+          } elseif ($_POST['cat'] == 156) {
+            
+            the_powerpress_content('farm-bureau-on-the-hill-podcast');
+            echo get_the_excerpt(  );
+          } elseif ($_POST['cat'] == 91) {
+            
+            the_powerpress_content('root-of-the-matter-podcast');
+            echo get_the_excerpt(  );
+          }
+        }
+        ?>
         <?php echo '<p class="latest-news__date">'.get_the_date('M j, Y').'</p>'; 
             the_title( sprintf( '<h2 class="archive-entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
         </div><!--.entry-content-->
