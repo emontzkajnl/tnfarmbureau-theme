@@ -43,10 +43,8 @@
             type: "POST",
             dataType: "JSON",
             success: function(res) {
-                console.log('res is ',res);
                 let newArray = [];
                 res.data.forEach(element => {
-                    console.log('el ',element);
                     newArray.push({
                         'label' : element[0],
                         'value' : element[1]
